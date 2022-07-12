@@ -1,8 +1,11 @@
 package com.luandkg.guilherme.horario;
 
 import android.os.Handler;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.luandkg.guilherme.utils.Threader;
+import com.luandkg.guilherme.utils.tempo.Calendario;
 import com.luandkg.guilherme.utils.tempo.Data;
 import com.luandkg.guilherme.utils.tempo.Tempo;
 
@@ -12,22 +15,22 @@ import java.util.TimerTask;
 
 public class TocadorDeSinalEscolar {
 
-    private TextView mSigla;
     private TextView mFazendo;
 
-    private PG mProgressante;
+    private ImageView mProgressante;
 
     private Professor mProfessor;
 
     final Handler myHandler = new Handler();
     private Timer temporizador;
     private boolean sextou = false;
+    private Temporizador mTemporrizador;
 
-    public TocadorDeSinalEscolar(TextView eSigla, TextView eFazendo, PG eProgressante, Professor eProfessor) {
-        mSigla = eSigla;
+    public TocadorDeSinalEscolar(TextView eFazendo, ImageView eProgressante, Temporizador eTemporrizador, Professor eProfessor) {
         mFazendo = eFazendo;
         mProgressante = eProgressante;
         mProfessor = eProfessor;
+        mTemporrizador = eTemporrizador;
     }
 
 
@@ -49,17 +52,17 @@ public class TocadorDeSinalEscolar {
 
             mFazendo.setText("Estou de boa....");
 
-            mProgressante.setProgressGrande(0);
-            mProgressante.setProgressPequeno(0);
+            mTemporrizador.setProgressGrande(0);
+            mTemporrizador.setProgressPequeno(0);
 
-            mSigla.setText("");
+            mTemporrizador.setText("");
 
             // ----------------------------------------------------
 
 
             String HOJE_DIA = Calendario.getDiaAtual();
             int HOJE_TEMPO = Calendario.getTempoDoDia();
-            String HOJE_DATA = Tempo.getADM();
+            String HOJE_DATA = Calendario.getADM();
 
 
             Informante.limpar(mProfessor, HOJE_DIA);
@@ -70,10 +73,10 @@ public class TocadorDeSinalEscolar {
                 //System.out.println("DATA -->> " + HOJE_DATA + " :: FERIAS");
 
                 mFazendo.setText("Estou de férias");
-                mSigla.setText("FÉRIAS");
+                mTemporrizador.setText("FÉRIAS");
 
-                mProgressante.set(Calendario.getDiaAtual(), Calendario.getTempoDoDia(), true, mProfessor);
-                mProgressante.setFerias(mProfessor.ferias_passou(Data.toData(HOJE_DATA)), mProfessor.getFerias().size());
+                mTemporrizador.set(Calendario.getDiaAtual(), Calendario.getTempoDoDia(), true, mProfessor);
+                mTemporrizador.setFerias(mProfessor.ferias_passou(Data.toData(HOJE_DATA)), mProfessor.getFerias().size());
 
             } else {
 
@@ -85,7 +88,7 @@ public class TocadorDeSinalEscolar {
                 int ultima_aula_10min_antes = 0;
                 int ultima_aula = 0;
 
-                mProgressante.set(Calendario.getDiaAtual(), Calendario.getTempoDoDia(), false, mProfessor);
+                mTemporrizador.set(Calendario.getDiaAtual(), Calendario.getTempoDoDia(), false, mProfessor);
 
                 if (mProfessor.existeCargaDeTrabalho(Calendario.SEXTA)) {
 
@@ -120,7 +123,7 @@ public class TocadorDeSinalEscolar {
                             progressoDaEscola(carga.getInicio().getValor(), carga.getFim().getValor());
 
                             mFazendo.setText("Estou na escola fazendo vários NADAS ....");
-                            mSigla.setText("kk");
+                            mTemporrizador.setText("kk");
 
 
                         }
@@ -136,7 +139,7 @@ public class TocadorDeSinalEscolar {
 
 
                                 mFazendo.setText(atividade.getEstouIndo());
-                                mSigla.setText("IR");
+                                mTemporrizador.setText("IR");
 
                                 progressoDaCoordenacao(atividade.getIndo_Inicio(), atividade.getIndo_Fim());
 
@@ -146,7 +149,7 @@ public class TocadorDeSinalEscolar {
                         if (atividade.isDentro(HOJE_TEMPO)) {
 
                             mFazendo.setText(atividade.getTipo());
-                            mSigla.setText(atividade.getSigla());
+                            mTemporrizador.setText(atividade.getSigla());
 
                             progressoDaCoordenacao(atividade.getInicio(), atividade.getFim());
 
@@ -159,7 +162,7 @@ public class TocadorDeSinalEscolar {
                     if (mProfessor.estouAlmocando(HOJE_TEMPO)) {
 
                         mFazendo.setText("Estou almoçando !");
-                        mSigla.setText("A");
+                        mTemporrizador.setText("A");
 
                         progressoDaCoordenacao(mProfessor.getAlmocoInicio().getValor(), mProfessor.getAlmocoFim().getValor());
 
@@ -186,7 +189,7 @@ public class TocadorDeSinalEscolar {
 
                             if (horario_da_turma.isDentro(HOJE_TEMPO)) {
 
-                                mSigla.setText(horario_da_turma.getNome());
+                                mTemporrizador.setText(horario_da_turma.getNome());
                                 progressoDaAula(horario_da_turma.getInicio(), horario_da_turma.getFim());
 
                                 if (horario_da_turma.getTipo().contentEquals("IN")) {
@@ -237,7 +240,7 @@ public class TocadorDeSinalEscolar {
                         if (mProfessor.estouIndoParaCasa(HOJE_DIA, HOJE_TEMPO)) {
 
                             mFazendo.setText("Estou indo para casa, amém !");
-                            mSigla.setText("CASA");
+                            mTemporrizador.setText("CASA");
 
                             progressoDaCoordenacao(mProfessor.getIndoParaCasa_Inicio(HOJE_DIA), mProfessor.getIndoParaCasa_Fim(HOJE_DIA));
 
@@ -254,7 +257,7 @@ public class TocadorDeSinalEscolar {
                     }
 
                 } else {
-                    progressoFimDeSemana(mProgressante, HOJE_DIA, HOJE_TEMPO);
+                    progressoFimDeSemana(HOJE_DIA, HOJE_TEMPO);
                 }
 
             }
@@ -263,6 +266,7 @@ public class TocadorDeSinalEscolar {
             // -------------- TESTES -----------------
             // testar(true);
 
+            Threader.atualizar_imagem(mProgressante, mTemporrizador.criar());
         }
     };
 
@@ -304,7 +308,7 @@ public class TocadorDeSinalEscolar {
 
         int eAgora = Calendario.getTempoDoDia();
 
-        progressarPequeno(mProgressante, eAgora, eInicio, eFim);
+        progressarPequeno(eAgora, eInicio, eFim);
 
     }
 
@@ -312,7 +316,7 @@ public class TocadorDeSinalEscolar {
 
         int eAgora = Calendario.getTempoDoDia();
 
-        progressarPequeno(mProgressante, eAgora, eInicio, eFim);
+        progressarPequeno(eAgora, eInicio, eFim);
 
     }
 
@@ -320,7 +324,7 @@ public class TocadorDeSinalEscolar {
 
         int eAgora = Calendario.getTempoDoDia();
 
-        progressar(mProgressante, eAgora, eInicio, eFim);
+        progressar(eAgora, eInicio, eFim);
 
     }
 
@@ -337,13 +341,13 @@ public class TocadorDeSinalEscolar {
             double prop = restante * 100.0;
             int iprop = (int) prop;
 
-            mSigla.setText("" + iprop);
+            mTemporrizador.setText("" + iprop);
 
         }
 
     }
 
-    public void progressar(PG eProgressante, int eAgora, int eInicio, int eFim) {
+    public void progressar(int eAgora, int eInicio, int eFim) {
 
         if (eAgora >= eInicio && eAgora < eFim) {
 
@@ -357,14 +361,14 @@ public class TocadorDeSinalEscolar {
             double restante = (((double) agora - inicio) / total);
             double prop = restante * 100.0;
 
-            eProgressante.setProgressGrande((int) prop);
+            mTemporrizador.setProgressGrande((int) prop);
             //  mContador.setText(""+prop );
 
         }
 
     }
 
-    public void progressarPequeno(PG eProgressante, int eAgora, int eInicio, int eFim) {
+    public void progressarPequeno(int eAgora, int eInicio, int eFim) {
 
         if (eAgora >= eInicio && eAgora < eFim) {
 
@@ -378,14 +382,14 @@ public class TocadorDeSinalEscolar {
             double restante = (((double) agora - inicio) / total);
             double prop = restante * 100.0;
 
-            eProgressante.setProgressPequeno((int) prop);
+            mTemporrizador.setProgressPequeno((int) prop);
             //  mContador.setText(""+prop );
 
         }
 
     }
 
-    public void progressoFimDeSemana(PG eProgressante, String eDia, int eAgora) {
+    public void progressoFimDeSemana(String eDia, int eAgora) {
 
         int metade = ((24 * 60 * 60));
         int total = ((24 * 60 * 60) * 2);
@@ -399,8 +403,8 @@ public class TocadorDeSinalEscolar {
             double restante = (((double) agora) / d_total);
             double prop = restante * 100.0;
 
-            eProgressante.setProgressGrande((int) prop);
-            mSigla.setText("SÁB");
+            mTemporrizador.setProgressGrande((int) prop);
+            mTemporrizador.setText("SÁB");
 
         } else {
             double agora = ((double) eAgora) + (double) metade;
@@ -410,8 +414,8 @@ public class TocadorDeSinalEscolar {
             double restante = (((double) agora) / d_total);
             double prop = restante * 100.0;
 
-            eProgressante.setProgressGrande((int) prop);
-            mSigla.setText("DOM");
+            mTemporrizador.setProgressGrande((int) prop);
+            mTemporrizador.setText("DOM");
 
         }
 

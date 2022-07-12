@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.Button;
 
 import com.google.android.material.textfield.TextInputEditText;
-import com.luandkg.guilherme.escola.Avaliador;
+import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
+import com.luandkg.guilherme.transferencias.RecarregadorDeAtividades;
+import com.luandkg.guilherme.transferencias.RenomeadorDeAtividade;
 
 public class DlgAtividadeRenomear extends AppCompatActivity {
 

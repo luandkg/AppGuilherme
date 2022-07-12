@@ -13,22 +13,19 @@ import android.widget.TextView;
 
 
 import com.luandkg.guilherme.R;
-import com.luandkg.guilherme.escola.Aluno;
-import com.luandkg.guilherme.escola.AlunoAtividade;
-import com.luandkg.guilherme.escola.AlunoResultado;
-import com.luandkg.guilherme.escola.AtividadeGraficos;
-import com.luandkg.guilherme.escola.AtividadesAnalisador;
-import com.luandkg.guilherme.escola.Avaliador;
-import com.luandkg.guilherme.escola.ESTANCIA3_2BIMESTRE;
+import com.luandkg.guilherme.escola.alunos.Aluno;
+import com.luandkg.guilherme.escola.alunos.AlunoAtividade;
+import com.luandkg.guilherme.escola.metodo_avaliativo.AtividadeGraficos;
+import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
+import com.luandkg.guilherme.escola.tempo.ESTANCIA3_2BIMESTRE;
 import com.luandkg.guilherme.escola.Escola;
 import com.luandkg.guilherme.escola.GGTurmas;
-import com.luandkg.guilherme.escola.SemanaContinua;
-import com.luandkg.guilherme.horario.PaletaDeCores;
+import com.luandkg.guilherme.escola.tempo.SemanaContinua;
+import com.luandkg.guilherme.escola.utils.PaletaDeCores;
 import com.luandkg.guilherme.listas.Itenizador;
 import com.luandkg.guilherme.listas.ListaGenerica;
 import com.luandkg.guilherme.listas.Widget;
 import com.luandkg.guilherme.utils.Strings;
-import com.luandkg.guilherme.utils.tempo.Calendario;
 import com.luandkg.guilherme.utils.tempo.Data;
 
 import java.util.ArrayList;

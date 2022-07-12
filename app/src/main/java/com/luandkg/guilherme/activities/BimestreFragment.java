@@ -9,15 +9,14 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
-import com.luandkg.guilherme.Fluxo;
-import com.luandkg.guilherme.R;
+import com.luandkg.guilherme.escola.render.Fluxo;
 import com.luandkg.guilherme.databinding.FragmentSlideshowBinding;
-import com.luandkg.guilherme.escola.Aluno;
-import com.luandkg.guilherme.escola.BimestreTemporal;
+import com.luandkg.guilherme.escola.alunos.Aluno;
+import com.luandkg.guilherme.escola.tempo.BimestreTemporal;
 import com.luandkg.guilherme.escola.Escola;
-import com.luandkg.guilherme.escola.SEDF_22;
+import com.luandkg.guilherme.escola.tempo.SEDF_22;
+import com.luandkg.guilherme.utils.tempo.Calendario;
 import com.luandkg.guilherme.utils.tempo.Data;
 import com.luandkg.guilherme.utils.tempo.Tempo;
 
@@ -47,12 +46,12 @@ public class BimestreFragment extends Fragment {
         SEDF_22 eSEDF_22 = new SEDF_22();
 
         ArrayList<Data> datas = eSEDF_22.getSegundo();
-        String hoje = Tempo.getADMComBarras();
+        String hoje = Calendario.getADMComBarras();
 
 
         if (eSEDF_22.getSegundo().size() > 0) {
-            TV_BIMESTRE_INICIO.setText(Tempo.filtrar_primeira(datas).getTempoLegivel());
-            TV_BIMESTRE_FIM.setText(Tempo.filtrar_ultima(datas).getTempoLegivel());
+            TV_BIMESTRE_INICIO.setText(Calendario.filtrar_primeira(datas).getTempoLegivel());
+            TV_BIMESTRE_FIM.setText(Calendario.filtrar_ultima(datas).getTempoLegivel());
         }
 
 

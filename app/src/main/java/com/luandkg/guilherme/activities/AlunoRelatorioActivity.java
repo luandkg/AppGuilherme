@@ -10,13 +10,10 @@ import android.widget.TextView;
 
 
 import com.luandkg.guilherme.R;
-import com.luandkg.guilherme.escola.AlunoPerfil;
-import com.luandkg.guilherme.escola.ESTANCIA3_2BIMESTRE;
-import com.luandkg.guilherme.escola.FluxoDeEntrega;
-import com.luandkg.guilherme.escola.Perfilizar;
-import com.luandkg.guilherme.utils.Texto;
-
-import java.util.ArrayList;
+import com.luandkg.guilherme.escola.alunos.AlunoPerfil;
+import com.luandkg.guilherme.escola.tempo.ESTANCIA3_2BIMESTRE;
+import com.luandkg.guilherme.escola.render.FluxoDeEntrega;
+import com.luandkg.guilherme.escola.metodo_avaliativo.Perfilizar;
 
 public class AlunoRelatorioActivity extends AppCompatActivity {
 

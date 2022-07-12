@@ -7,18 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import com.luandkg.guilherme.Avaliacao;
 import com.luandkg.guilherme.activities.AlunoRelatorioActivity;
-import com.luandkg.guilherme.activities.MomentoDeAvaliacao;
-import com.luandkg.guilherme.escola.AlunoResultado;
-import com.luandkg.guilherme.escola.CicloDeAvaliacao;
+import com.luandkg.guilherme.escola.alunos.AlunoResultado;
 import com.luandkg.guilherme.R;
-import com.luandkg.guilherme.escola.Atividade;
-import com.luandkg.guilherme.utils.tempo.Calendario;
 
 import java.util.ArrayList;
 

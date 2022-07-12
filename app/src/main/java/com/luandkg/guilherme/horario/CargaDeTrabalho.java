@@ -1,5 +1,7 @@
 package com.luandkg.guilherme.horario;
 
+import com.luandkg.guilherme.utils.tempo.Calendario;
+
 public class CargaDeTrabalho {
 
     private String mDia;

@@ -1,11 +1,6 @@
 package com.luandkg.guilherme.activities;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.RectF;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -18,24 +13,21 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.luandkg.guilherme.AvaliadorAnimattor;
-import com.luandkg.guilherme.AvaliadorImagem;
+import com.luandkg.guilherme.escola.render.AvaliadorImagem;
 import com.luandkg.guilherme.R;
 import com.luandkg.guilherme.databinding.FragmentSemanasBinding;
-import com.luandkg.guilherme.escola.Aluno;
-import com.luandkg.guilherme.escola.AlunoResultado;
-import com.luandkg.guilherme.escola.AtividadeGraficos;
-import com.luandkg.guilherme.escola.AtividadesAnalisador;
-import com.luandkg.guilherme.escola.Avaliador;
-import com.luandkg.guilherme.escola.ESTANCIA3_2BIMESTRE;
+import com.luandkg.guilherme.escola.alunos.AlunoResultado;
+import com.luandkg.guilherme.escola.metodo_avaliativo.AtividadeGraficos;
+import com.luandkg.guilherme.escola.metodo_avaliativo.AtividadesAnalisador;
+import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
+import com.luandkg.guilherme.escola.tempo.ESTANCIA3_2BIMESTRE;
 import com.luandkg.guilherme.escola.Escola;
 import com.luandkg.guilherme.escola.GGTurmas;
-import com.luandkg.guilherme.escola.SemanaContinua;
-import com.luandkg.guilherme.escola.SemanaContinuaCarregada;
+import com.luandkg.guilherme.escola.tempo.SemanaContinua;
+import com.luandkg.guilherme.escola.tempo.SemanaContinuaCarregada;
 import com.luandkg.guilherme.listas.Itenizador;
 import com.luandkg.guilherme.listas.ListaGenerica;
 import com.luandkg.guilherme.listas.Widget;
-import com.luandkg.guilherme.utils.ImagemCriador;
-import com.luandkg.guilherme.utils.Matematica;
 import com.luandkg.guilherme.utils.Strings;
 import com.luandkg.guilherme.utils.tempo.Data;
 

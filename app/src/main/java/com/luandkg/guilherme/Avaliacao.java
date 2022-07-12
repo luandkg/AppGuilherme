@@ -10,17 +10,15 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.luandkg.guilherme.escola.AlunoComNota;
-import com.luandkg.guilherme.escola.Atividade;
-import com.luandkg.guilherme.escola.Avaliador;
+import com.luandkg.guilherme.escola.metodo_avaliativo.Atividade;
+import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
 import com.luandkg.guilherme.escola.Escola;
-import com.luandkg.guilherme.utils.RefString;
 import com.luandkg.guilherme.listas.onAvaliacao;
+import com.luandkg.guilherme.transferencias.RecarregadorDeAtividades;
+import com.luandkg.guilherme.transferencias.RenomeadorDeAtividade;
 import com.luandkg.guilherme.utils.Acao;
 import com.luandkg.guilherme.utils.CaixaSimNao;
 import com.luandkg.guilherme.widgets.CaixaDeAtividade;
-
-import java.util.ArrayList;
 
 public class Avaliacao extends AppCompatActivity {
 

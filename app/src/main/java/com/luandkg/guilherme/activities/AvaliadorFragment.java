@@ -10,12 +10,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.luandkg.guilherme.Atividades;
-import com.luandkg.guilherme.FluxoActivity;
 import com.luandkg.guilherme.Local;
-import com.luandkg.guilherme.R;
 import com.luandkg.guilherme.Versionador;
 import com.luandkg.guilherme.databinding.FragmentHomeBinding;
 

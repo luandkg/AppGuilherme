@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".QuadroDeNotas">
+    tools:context=".activities.QuadroDeNotas">
 
     <TextView
         android:id="@+id/QUADRO_DE_NOTAS_TITULO"

@@ -10,10 +10,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-import com.luandkg.guilherme.escola.Avaliador;
-import com.luandkg.guilherme.escola.CoresDeAvaliacao;
+import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
+import com.luandkg.guilherme.escola.metodo_avaliativo.CoresDeAvaliacao;
 import com.luandkg.guilherme.R;
-import com.luandkg.guilherme.escola.AlunoComNota;
+import com.luandkg.guilherme.escola.alunos.AlunoComNota;
 
 import java.util.ArrayList;
 

@@ -23,13 +23,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FluxoActivity"
+            android:name=".activities.FluxoActivity"
             android:exported="false" />
         <activity
             android:name=".DlgAtividadeRenomear"
             android:exported="false" />
         <activity
-            android:name=".QuadroDeNotas"
+            android:name=".activities.QuadroDeNotas"
             android:exported="false" />
         <activity
             android:name=".Avaliacao"
@@ -44,7 +44,7 @@
             android:name=".activities.AlunoRelatorioActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".guardado.MainActivity"
             android:exported="false">
         </activity>
     </application>

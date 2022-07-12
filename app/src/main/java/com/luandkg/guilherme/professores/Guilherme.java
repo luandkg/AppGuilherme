@@ -1,6 +1,6 @@
 package com.luandkg.guilherme.professores;
 
-import com.luandkg.guilherme.escola.SEDF_22;
+import com.luandkg.guilherme.escola.tempo.SEDF_22;
 import com.luandkg.guilherme.horario.AtividadeEspecial;
 import com.luandkg.guilherme.horario.Professor;
 import com.luandkg.guilherme.horario.TempoEstampa;
@@ -8,7 +8,6 @@ import com.luandkg.guilherme.horario.TurmaItem;
 import com.luandkg.guilherme.utils.tempo.Calendario;
 import com.luandkg.guilherme.utils.tempo.Data;
 import com.luandkg.guilherme.utils.tempo.DiaSemanal;
-import com.luandkg.guilherme.utils.tempo.Tempo;
 
 
 public class Guilherme {
@@ -23,7 +22,7 @@ public class Guilherme {
        // eProfessor.definirCoordenacaoColetiva("QUARTA", new TempoEstampa(9, 0), new TempoEstampa(12, 0));
        /// eProfessor.definirCoordenacaoInidivudal("SEGUNDA", new TempoEstampa(9, 0), new TempoEstampa(12, 0));
 
-        eProfessor.adicionar_ferias(Tempo.filtrar( new SEDF_22().getDatas(),new Data(2022,7,10, DiaSemanal.Domingo),new Data(2022,8,2,DiaSemanal.Domingo)));
+        eProfessor.adicionar_ferias(Calendario.filtrar( new SEDF_22().getDatas(),new Data(2022,7,10, DiaSemanal.Domingo),new Data(2022,7,29,DiaSemanal.Domingo)));
 
         AtividadeEspecial ca = eProfessor.criarAtividade("TERCA", "CA", "Coordenação de Área", "Estou coordenando em área ....",  new TempoEstampa(9, 0), new TempoEstampa(12, 0));
         AtividadeEspecial cc = eProfessor.criarAtividade("QUARTA", "CC", "Coordenação Coletiva", "Estou em coordenação coletiva ....",  new TempoEstampa(9, 0), new TempoEstampa(12, 0));

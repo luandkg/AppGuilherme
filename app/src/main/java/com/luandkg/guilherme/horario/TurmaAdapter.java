@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.luandkg.guilherme.R;
+import com.luandkg.guilherme.escola.utils.PaletaDeCores;
 
 import java.util.ArrayList;
 

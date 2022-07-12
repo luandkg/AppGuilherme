@@ -2,9 +2,8 @@ package com.luandkg.guilherme.horario;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.os.Build;
 
-import androidx.annotation.RequiresApi;
+import com.luandkg.guilherme.escola.render.Logo;
 
 public class Informante {
 

@@ -2,17 +2,13 @@ package com.luandkg.guilherme;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.RectF;
 import android.os.Handler;
 import android.widget.ImageView;
 
 
-import com.luandkg.guilherme.escola.AlunoResultado;
-import com.luandkg.guilherme.escola.SemanaContinuaCarregada;
-import com.luandkg.guilherme.utils.Matematica;
+import com.luandkg.guilherme.escola.alunos.AlunoResultado;
+import com.luandkg.guilherme.escola.render.AvaliadorImagem;
+import com.luandkg.guilherme.escola.tempo.SemanaContinuaCarregada;
 
 import java.util.ArrayList;
 import java.util.Timer;

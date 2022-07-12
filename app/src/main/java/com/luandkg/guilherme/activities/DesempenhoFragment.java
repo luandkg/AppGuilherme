@@ -13,12 +13,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.luandkg.guilherme.R;
 import com.luandkg.guilherme.databinding.FragmentDesempenhoBinding;
 import com.luandkg.guilherme.databinding.FragmentSlideshowBinding;
-import com.luandkg.guilherme.escola.AlunoResultado;
-import com.luandkg.guilherme.escola.Avaliador;
-import com.luandkg.guilherme.escola.CoresDeAvaliacao;
+import com.luandkg.guilherme.escola.alunos.AlunoResultado;
+import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
+import com.luandkg.guilherme.escola.metodo_avaliativo.CoresDeAvaliacao;
 import com.luandkg.guilherme.escola.Escola;
 import com.luandkg.guilherme.utils.Strings;
 

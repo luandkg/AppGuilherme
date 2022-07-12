@@ -3,6 +3,10 @@ package com.luandkg.guilherme.escola;
 import com.luandkg.guilherme.Local;
 import com.luandkg.guilherme.dkg.DKG;
 import com.luandkg.guilherme.dkg.DKGObjeto;
+import com.luandkg.guilherme.escola.alunos.Aluno;
+import com.luandkg.guilherme.escola.alunos.AlunoAtividade;
+import com.luandkg.guilherme.escola.alunos.AlunoComNota;
+import com.luandkg.guilherme.escola.alunos.AlunoResultado;
 import com.luandkg.guilherme.utils.FS;
 
 import java.io.File;

@@ -11,9 +11,9 @@ import android.widget.TextView;
 
 
 import com.luandkg.guilherme.Avaliacao;
-import com.luandkg.guilherme.escola.CicloDeAvaliacao;
+import com.luandkg.guilherme.escola.metodo_avaliativo.CicloDeAvaliacao;
 import com.luandkg.guilherme.R;
-import com.luandkg.guilherme.escola.Atividade;
+import com.luandkg.guilherme.escola.metodo_avaliativo.Atividade;
 import com.luandkg.guilherme.utils.tempo.Calendario;
 
 import java.util.ArrayList;

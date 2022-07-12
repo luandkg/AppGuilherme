@@ -6,16 +6,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.luandkg.guilherme.databinding.FragmentGalleryBinding;
-import com.luandkg.guilherme.horario.PG;
-import com.luandkg.guilherme.horario.PaletaDeCores;
+import com.luandkg.guilherme.databinding.FragmentHorarioBinding;
+import com.luandkg.guilherme.escola.utils.PaletaDeCores;
 import com.luandkg.guilherme.horario.Professor;
+import com.luandkg.guilherme.horario.Temporizador;
 import com.luandkg.guilherme.professores.Professores;
 import com.luandkg.guilherme.horario.TocadorDeSinalEscolar;
 import com.luandkg.guilherme.horario.TurmaAdapter;
@@ -29,9 +30,10 @@ import java.util.ArrayList;
 
 public class HorarioFragment extends Fragment {
 
-    private FragmentGalleryBinding binding;
+    private FragmentHorarioBinding binding;
 
-    private PG mProgresoEscola;
+    private ImageView mProgresoEscola;
+    private Temporizador mTemporrizador;
 
     private Button mHoje;
     private Button mSegunda;
@@ -53,7 +55,7 @@ public class HorarioFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
 
-        binding = FragmentGalleryBinding.inflate(inflater, container, false);
+        binding = FragmentHorarioBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         mProgresoEscola = binding.progressoGeral;
@@ -64,14 +66,15 @@ public class HorarioFragment extends Fragment {
         mQuarta = binding.quarta;
         mQuinta = binding.quinta;
         mSexta = binding.sexta;
-        mSigla = binding.contador;
+      //  mSigla = binding.contador;
         mFazendo = binding.fazendo;
         mRodape = binding.rodape;
 
         mLista = binding.lista;
 
 
-        mProgresoEscola.setProgressGrande(0);
+        mTemporrizador = new Temporizador();
+        mTemporrizador.setProgressGrande(0);
 
         mProgresoEscola.setBackgroundColor(Color.TRANSPARENT);
 
@@ -136,10 +139,10 @@ public class HorarioFragment extends Fragment {
         });
 
 
-        mProgresoEscola.set(Calendario.getDiaAtual(), Calendario.getTempoDoDia(), false, mProfessor);
-        mProgresoEscola.podeDesenhar();
+        mTemporrizador.set(Calendario.getDiaAtual(), Calendario.getTempoDoDia(), false, mProfessor);
+        mTemporrizador.podeDesenhar();
 
-        mTocadorDeSinalEscolar = new TocadorDeSinalEscolar(mSigla, mFazendo, mProgresoEscola, mProfessor);
+        mTocadorDeSinalEscolar = new TocadorDeSinalEscolar( mFazendo, mProgresoEscola, mTemporrizador,mProfessor);
 
         mTocadorDeSinalEscolar.run();
 
@@ -182,7 +185,7 @@ public class HorarioFragment extends Fragment {
             ArrayList<TurmaItem> hoje_aulas = TurmaItem.filtrarTurmas(Calendario.getDiaAtual(), mProfessor.getTurmas());
 
 
-            if (mProfessor.estou_em_ferias(Data.toData(Tempo.getADM()))) {
+            if (mProfessor.estou_em_ferias(Data.toData(Calendario.getADM()))) {
                 hoje_aulas.clear();
             }
 
@@ -222,7 +225,7 @@ public class HorarioFragment extends Fragment {
 
         ArrayList<TurmaItem> hoje_aulas = TurmaItem.filtrarTurmas(eDia, mProfessor.getTurmas());
 
-        if (mProfessor.estou_em_ferias(Data.toData(Tempo.getADM()))) {
+        if (mProfessor.estou_em_ferias(Data.toData(Calendario.getADM()))) {
             hoje_aulas.clear();
         }
 

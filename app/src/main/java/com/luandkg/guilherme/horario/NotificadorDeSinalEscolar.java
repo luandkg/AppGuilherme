@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Handler;
 import android.widget.TextView;
 
+import com.luandkg.guilherme.utils.tempo.Calendario;
 import com.luandkg.guilherme.utils.tempo.Data;
 import com.luandkg.guilherme.utils.tempo.Tempo;
 
@@ -49,7 +50,7 @@ public class NotificadorDeSinalEscolar {
 
             String HOJE_DIA = Calendario.getDiaAtual();
             int HOJE_TEMPO = Calendario.getTempoDoDia();
-            String HOJE_DATA = Tempo.getADM();
+            String HOJE_DATA = Calendario.getADM();
 
             Informante.limpar(mProfessor, HOJE_DIA);
 
@@ -94,7 +95,6 @@ public class NotificadorDeSinalEscolar {
 
                         if (carga.isDentro(HOJE_DIA, HOJE_TEMPO)) {
 
-                            progressoDaEscola(carga.getInicio().getValor(), carga.getFim().getValor());
 
 
                         }
@@ -108,7 +108,6 @@ public class NotificadorDeSinalEscolar {
 
                                 Informante.notificarIndo(mContexto, atividade, mProfessor);
 
-                                progressoDaCoordenacao(atividade.getIndo_Inicio(), atividade.getIndo_Fim());
 
                             }
                         }
@@ -116,7 +115,6 @@ public class NotificadorDeSinalEscolar {
                         if (atividade.isDentro(HOJE_TEMPO)) {
 
 
-                            progressoDaCoordenacao(atividade.getInicio(), atividade.getFim());
 
                         }
 
@@ -127,7 +125,6 @@ public class NotificadorDeSinalEscolar {
                     if (mProfessor.estouAlmocando(HOJE_TEMPO)) {
 
 
-                        progressoDaCoordenacao(mProfessor.getAlmocoInicio().getValor(), mProfessor.getAlmocoFim().getValor());
 
                     }
 
@@ -152,7 +149,6 @@ public class NotificadorDeSinalEscolar {
                             if (horario_da_turma.isDentro(HOJE_TEMPO)) {
 
                                 //    mSigla.setText(horario_da_turma.getNome());
-                                progressoDaAula(horario_da_turma.getInicio(), horario_da_turma.getFim());
 
                                 if (horario_da_turma.getTipo().contentEquals("IN")) {
                                     //   mFazendo.setText("Estou no intervalo !");
@@ -204,7 +200,6 @@ public class NotificadorDeSinalEscolar {
                             // mFazendo.setText("Estou indo para casa, amém !");
                             // mSigla.setText("CASA");
 
-                            progressoDaCoordenacao(mProfessor.getIndoParaCasa_Inicio(HOJE_DIA), mProfessor.getIndoParaCasa_Fim(HOJE_DIA));
 
                         }
 
@@ -236,122 +231,9 @@ public class NotificadorDeSinalEscolar {
     }
 
 
-    public void progressoDaAula(int eInicio, int eFim) {
-
-        int eAgora = Calendario.getTempoDoDia();
-
-        //    progressarPequeno(mProgressante, eAgora, eInicio, eFim);
-
-    }
-
-    public void progressoDaCoordenacao(int eInicio, int eFim) {
-
-        int eAgora = Calendario.getTempoDoDia();
-
-        //  progressarPequeno(mProgressante, eAgora, eInicio, eFim);
-
-    }
-
-    public void progressoDaEscola(int eInicio, int eFim) {
-
-        int eAgora = Calendario.getTempoDoDia();
-
-        //    progressar(mProgressante, eAgora, eInicio, eFim);
-
-    }
 
 
-    public void mostrarProgressoInterno(int inicio, int fim) {
 
-        int total = fim - inicio;
 
-        int eAgora = Calendario.getTempoDoDia();
 
-        if (eAgora >= inicio && eAgora < fim) {
-
-            double restante = (((double) eAgora - (double) inicio) / (double) total);
-            double prop = restante * 100.0;
-            int iprop = (int) prop;
-
-            //   mSigla.setText("" + iprop);
-
-        }
-
-    }
-
-    public void progressar(PG eProgressante, int eAgora, int eInicio, int eFim) {
-
-        if (eAgora >= eInicio && eAgora < eFim) {
-
-            double agora = (double) eAgora;
-
-            double inicio = (double) eInicio;
-            double fim = (double) eFim;
-
-            double total = fim - inicio;
-
-            double restante = (((double) agora - inicio) / total);
-            double prop = restante * 100.0;
-
-            eProgressante.setProgressGrande((int) prop);
-            //  mContador.setText(""+prop );
-
-        }
-
-    }
-
-    public void progressarPequeno(PG eProgressante, int eAgora, int eInicio, int eFim) {
-
-        if (eAgora >= eInicio && eAgora < eFim) {
-
-            double agora = (double) eAgora;
-
-            double inicio = (double) eInicio;
-            double fim = (double) eFim;
-
-            double total = fim - inicio;
-
-            double restante = (((double) agora - inicio) / total);
-            double prop = restante * 100.0;
-
-            eProgressante.setProgressPequeno((int) prop);
-            //  mContador.setText(""+prop );
-
-        }
-
-    }
-
-    public void progressoFimDeSemana(PG eProgressante, String eDia, int eAgora) {
-
-        int metade = ((24 * 60 * 60));
-        int total = ((24 * 60 * 60) * 2);
-
-        if (eDia.contentEquals(Calendario.SABADO)) {
-
-            double agora = ((double) eAgora);
-
-            double d_total = (double) total;
-
-            double restante = (((double) agora) / d_total);
-            double prop = restante * 100.0;
-
-            eProgressante.setProgressGrande((int) prop);
-            //  mSigla.setText("SÁB");
-
-        } else {
-            double agora = ((double) eAgora) + (double) metade;
-
-            double d_total = (double) total;
-
-            double restante = (((double) agora) / d_total);
-            double prop = restante * 100.0;
-
-            eProgressante.setProgressGrande((int) prop);
-            //     mSigla.setText("DOM");
-
-        }
-
-        // mFazendo.setText("Estou curtindo o final de semana ...");
-
-    }
 }

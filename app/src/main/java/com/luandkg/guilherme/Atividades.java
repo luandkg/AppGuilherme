@@ -3,7 +3,6 @@ package com.luandkg.guilherme;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -12,8 +11,10 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.luandkg.guilherme.escola.Atividade;
-import com.luandkg.guilherme.escola.Avaliador;
+import com.luandkg.guilherme.activities.QuadroDeNotas;
+import com.luandkg.guilherme.escola.metodo_avaliativo.Atividade;
+import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
+import com.luandkg.guilherme.transferencias.RecarregadorDeAtividades;
 import com.luandkg.guilherme.utils.CaixaSimNao;
 import com.luandkg.guilherme.listas.onAtividadesDaTurma;
 
