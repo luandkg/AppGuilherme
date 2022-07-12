@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Atividade;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
 import com.luandkg.guilherme.escola.Escola;
-import com.luandkg.guilherme.listas.onAvaliacao;
+import com.luandkg.guilherme.listas.Listar_Avaliacao;
 import com.luandkg.guilherme.transferencias.RecarregadorDeAtividades;
 import com.luandkg.guilherme.transferencias.RenomeadorDeAtividade;
 import com.luandkg.guilherme.utils.Acao;
@@ -34,7 +34,7 @@ public class Avaliacao extends AppCompatActivity {
     private ListView AVALIACAO_LISTAGEM;
     private CaixaDeAtividade AVALIACAO_CAIXA;
 
-    private onAvaliacao onAvaliacao;
+    private Listar_Avaliacao Listar_Avaliacao;
 
 
     private Avaliacao mAvaliacao = null;
@@ -77,8 +77,8 @@ public class Avaliacao extends AppCompatActivity {
 
         AVALIACAO_NOME.setText(mAtividade.getNome());
 
-        onAvaliacao = new onAvaliacao(this, mAtividade.getAlunos());
-        AVALIACAO_LISTAGEM.setAdapter(onAvaliacao);
+        Listar_Avaliacao = new Listar_Avaliacao(this, mAtividade.getAlunos());
+        AVALIACAO_LISTAGEM.setAdapter(Listar_Avaliacao);
 
 
         AVALIACAO_CAIXA.setMudar(mAtividade.getAlunos().size(), mAtividade.contarPositivos(), mAtividade.getAlunos().size());

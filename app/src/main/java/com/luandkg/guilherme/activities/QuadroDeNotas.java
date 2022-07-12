@@ -20,7 +20,7 @@ import com.luandkg.guilherme.utils.Matematica;
 
 import java.util.ArrayList;
 
-import com.luandkg.guilherme.listas.onNotas;
+import com.luandkg.guilherme.listas.Listar_Notas;
 import com.luandkg.guilherme.utils.Strings;
 
 public class QuadroDeNotas extends AppCompatActivity {
@@ -40,7 +40,7 @@ public class QuadroDeNotas extends AppCompatActivity {
     private boolean AVALIADOR_VALIDO;
 
     private ArrayList<AlunoResultado> mAlunos;
-    private onNotas onNotas;
+    private Listar_Notas Listar_Notas;
 
 
     @Override
@@ -95,14 +95,14 @@ public class QuadroDeNotas extends AppCompatActivity {
 
             mAlunos = Escola.getAlunosComResultado(mTurma);
             Avaliador.avaliar_resultado(mTurma, AVALIADOR_VALOR, mAlunos);
-            onNotas = new onNotas(this, mAlunos);
-            QUADRO_DE_NOTAS_LISTAGEM.setAdapter(onNotas);
+            Listar_Notas = new Listar_Notas(this, mAlunos);
+            QUADRO_DE_NOTAS_LISTAGEM.setAdapter(Listar_Notas);
 
         } else {
             QUADRO_DE_NOTAS_ALTERAR.setBackgroundColor(Color.parseColor(CoresDeValidacao.INVALIDO));
 
-            onNotas = new onNotas(this, new ArrayList<AlunoResultado>());
-            QUADRO_DE_NOTAS_LISTAGEM.setAdapter(onNotas);
+            Listar_Notas = new Listar_Notas(this, new ArrayList<AlunoResultado>());
+            QUADRO_DE_NOTAS_LISTAGEM.setAdapter(Listar_Notas);
         }
 
 

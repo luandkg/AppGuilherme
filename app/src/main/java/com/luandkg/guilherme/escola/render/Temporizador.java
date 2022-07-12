@@ -1,4 +1,4 @@
-package com.luandkg.guilherme.horario;
+package com.luandkg.guilherme.escola.render;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -7,6 +7,8 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
 
+import com.luandkg.guilherme.escola.Professor;
+import com.luandkg.guilherme.escola.coisas.AtividadeEspecial;
 import com.luandkg.guilherme.escola.utils.PaletaDeCores;
 import com.luandkg.guilherme.utils.tempo.Calendario;
 

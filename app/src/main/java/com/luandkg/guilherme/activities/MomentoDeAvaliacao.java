@@ -24,7 +24,8 @@ import com.luandkg.guilherme.escola.tempo.SemanaContinua;
 import com.luandkg.guilherme.escola.utils.PaletaDeCores;
 import com.luandkg.guilherme.listas.Itenizador;
 import com.luandkg.guilherme.listas.ListaGenerica;
-import com.luandkg.guilherme.listas.Widget;
+import com.luandkg.guilherme.professores.Guilherme;
+import com.luandkg.guilherme.utils.Widget;
 import com.luandkg.guilherme.utils.Strings;
 import com.luandkg.guilherme.utils.tempo.Data;
 
@@ -79,7 +80,7 @@ public class MomentoDeAvaliacao extends AppCompatActivity {
 
                 ArrayList<AlunoAtividade> avaliados = new ArrayList<AlunoAtividade>();
 
-                for (String turma : GGTurmas.getTurmas()) {
+                for (String turma : Guilherme.getGuilherme().listar_turmas()) {
 
                     String AVALIADOR_VALOR_STRING = Strings.seVazioEntao(Avaliador.getAvaliacao(turma), "1,0");
                     double AVALIADOR_VALOR = Double.parseDouble(AVALIADOR_VALOR_STRING.replace(",", "."));

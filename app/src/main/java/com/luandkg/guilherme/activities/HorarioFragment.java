@@ -15,15 +15,14 @@ import androidx.fragment.app.Fragment;
 
 import com.luandkg.guilherme.databinding.FragmentHorarioBinding;
 import com.luandkg.guilherme.escola.utils.PaletaDeCores;
-import com.luandkg.guilherme.horario.Professor;
-import com.luandkg.guilherme.horario.Temporizador;
+import com.luandkg.guilherme.escola.Professor;
+import com.luandkg.guilherme.escola.render.Temporizador;
 import com.luandkg.guilherme.professores.Professores;
-import com.luandkg.guilherme.horario.TocadorDeSinalEscolar;
-import com.luandkg.guilherme.horario.TurmaAdapter;
-import com.luandkg.guilherme.horario.TurmaItem;
+import com.luandkg.guilherme.escola.TocadorDeSinalEscolar;
+import com.luandkg.guilherme.listas.Listar_Turmas;
+import com.luandkg.guilherme.escola.coisas.TurmaItem;
 import com.luandkg.guilherme.utils.tempo.Calendario;
 import com.luandkg.guilherme.utils.tempo.Data;
-import com.luandkg.guilherme.utils.tempo.Tempo;
 
 import java.util.ArrayList;
 
@@ -48,7 +47,7 @@ public class HorarioFragment extends Fragment {
 
     private TocadorDeSinalEscolar mTocadorDeSinalEscolar;
     private String mSelecionado = "";
-    private TurmaAdapter mTurmaAdapter;
+    private Listar_Turmas mListarTurmas;
     private Professor mProfessor;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -84,7 +83,7 @@ public class HorarioFragment extends Fragment {
 
         mRodape.setText("Professor " + mProfessor.getNome());
 
-        mTurmaAdapter = new TurmaAdapter(getContext(), new ArrayList<TurmaItem>(), mProfessor);
+        mListarTurmas = new Listar_Turmas(getContext(), new ArrayList<TurmaItem>(), mProfessor);
 
 
         menu();
@@ -189,9 +188,9 @@ public class HorarioFragment extends Fragment {
                 hoje_aulas.clear();
             }
 
-            mTurmaAdapter = new TurmaAdapter(getContext(), hoje_aulas, mProfessor);
+            mListarTurmas = new Listar_Turmas(getContext(), hoje_aulas, mProfessor);
 
-            mLista.setAdapter(mTurmaAdapter);
+            mLista.setAdapter(mListarTurmas);
 
         } else if (Calendario.isIgual(Calendario.SEGUNDA, mSelecionado)) {
 
@@ -229,8 +228,8 @@ public class HorarioFragment extends Fragment {
             hoje_aulas.clear();
         }
 
-        mTurmaAdapter = new TurmaAdapter(getContext(), hoje_aulas, mProfessor);
-        mLista.setAdapter(mTurmaAdapter);
+        mListarTurmas = new Listar_Turmas(getContext(), hoje_aulas, mProfessor);
+        mLista.setAdapter(mListarTurmas);
 
         if (Calendario.getDiaAtual().contentEquals(eDia)) {
             eHoje.setBackgroundColor(VERDE);

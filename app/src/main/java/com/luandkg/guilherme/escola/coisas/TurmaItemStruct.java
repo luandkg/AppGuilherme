@@ -1,4 +1,4 @@
-package com.luandkg.guilherme.horario;
+package com.luandkg.guilherme.escola.coisas;
 
 import android.widget.Button;
 import android.widget.TextView;

@@ -1,9 +1,12 @@
-package com.luandkg.guilherme.horario;
+package com.luandkg.guilherme.escola;
 
 import android.content.Context;
 import android.graphics.Bitmap;
 
+import com.luandkg.guilherme.escola.coisas.AtividadeEspecial;
+import com.luandkg.guilherme.escola.coisas.TurmaItem;
 import com.luandkg.guilherme.escola.render.Logo;
+import com.luandkg.guilherme.utils.Notificar;
 
 public class Informante {
 

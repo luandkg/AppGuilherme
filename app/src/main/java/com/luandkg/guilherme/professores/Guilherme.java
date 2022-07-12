@@ -1,13 +1,13 @@
 package com.luandkg.guilherme.professores;
 
 import com.luandkg.guilherme.escola.tempo.SEDF_22;
-import com.luandkg.guilherme.horario.AtividadeEspecial;
-import com.luandkg.guilherme.horario.Professor;
-import com.luandkg.guilherme.horario.TempoEstampa;
-import com.luandkg.guilherme.horario.TurmaItem;
+import com.luandkg.guilherme.escola.coisas.AtividadeEspecial;
+import com.luandkg.guilherme.escola.Professor;
+import com.luandkg.guilherme.escola.coisas.TurmaItem;
 import com.luandkg.guilherme.utils.tempo.Calendario;
 import com.luandkg.guilherme.utils.tempo.Data;
 import com.luandkg.guilherme.utils.tempo.DiaSemanal;
+import com.luandkg.guilherme.utils.tempo.TempoEstampa;
 
 
 public class Guilherme {
@@ -41,6 +41,17 @@ public class Guilherme {
 
         eProfessor.definirAlmoco(new TempoEstampa(12, 0), new TempoEstampa(12, 45));
 
+
+        eProfessor.adicionar_turma("7H");
+        eProfessor.adicionar_turma("7I");
+        eProfessor.adicionar_turma("7J");
+        eProfessor.adicionar_turma("7K");
+        eProfessor.adicionar_turma("7L");
+        eProfessor.adicionar_turma("7M");
+        eProfessor.adicionar_turma("7N");
+
+        eProfessor.adicionar_turma("PD7H");
+        eProfessor.adicionar_turma("PD7I");
 
 
         TempoEstampa ENTRADA_PRIMEIRO = new TempoEstampa(13, 0);

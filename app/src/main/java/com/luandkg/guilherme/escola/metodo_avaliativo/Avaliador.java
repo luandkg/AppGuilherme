@@ -10,7 +10,6 @@ import com.luandkg.guilherme.escola.tempo.ContandoData;
 import com.luandkg.guilherme.utils.FS;
 import com.luandkg.guilherme.utils.tempo.Calendario;
 import com.luandkg.guilherme.utils.tempo.Data;
-import com.luandkg.guilherme.utils.tempo.Tempo;
 
 import java.io.File;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.luandkg.guilherme.horario;
+package com.luandkg.guilherme.listas;
 
 
 import android.content.Context;
@@ -12,17 +12,20 @@ import android.widget.TextView;
 
 import com.luandkg.guilherme.R;
 import com.luandkg.guilherme.escola.utils.PaletaDeCores;
+import com.luandkg.guilherme.escola.Professor;
+import com.luandkg.guilherme.escola.coisas.TurmaItem;
+import com.luandkg.guilherme.escola.coisas.TurmaItemStruct;
 
 import java.util.ArrayList;
 
-public class TurmaAdapter extends BaseAdapter {
+public class Listar_Turmas extends BaseAdapter {
 
     private Context context;
     private ArrayList<TurmaItem> mLista;
     private static LayoutInflater inflater = null;
     private Professor mProfessor;
 
-    public TurmaAdapter(Context mainActivity, ArrayList<TurmaItem> eLista, Professor eProfessor) {
+    public Listar_Turmas(Context mainActivity, ArrayList<TurmaItem> eLista, Professor eProfessor) {
         context = mainActivity;
         mLista = eLista;
         mProfessor = eProfessor;

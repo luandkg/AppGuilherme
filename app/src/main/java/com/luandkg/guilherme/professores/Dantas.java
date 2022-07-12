@@ -1,11 +1,11 @@
 package com.luandkg.guilherme.professores;
 
 
-import com.luandkg.guilherme.horario.AtividadeEspecial;
-import com.luandkg.guilherme.horario.Professor;
-import com.luandkg.guilherme.horario.TempoEstampa;
-import com.luandkg.guilherme.horario.TurmaItem;
+import com.luandkg.guilherme.escola.coisas.AtividadeEspecial;
+import com.luandkg.guilherme.escola.Professor;
+import com.luandkg.guilherme.escola.coisas.TurmaItem;
 import com.luandkg.guilherme.utils.tempo.Calendario;
+import com.luandkg.guilherme.utils.tempo.TempoEstampa;
 
 public class Dantas {
 

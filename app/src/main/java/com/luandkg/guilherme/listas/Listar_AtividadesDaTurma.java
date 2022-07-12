@@ -18,13 +18,13 @@ import com.luandkg.guilherme.utils.tempo.Calendario;
 
 import java.util.ArrayList;
 
-public class onAtividadesDaTurma extends BaseAdapter {
+public class Listar_AtividadesDaTurma extends BaseAdapter {
 
     private Context context;
     private ArrayList<Atividade> mLista;
     private static LayoutInflater inflater = null;
 
-    public onAtividadesDaTurma(Context mainActivity, ArrayList<Atividade> eLista) {
+    public Listar_AtividadesDaTurma(Context mainActivity, ArrayList<Atividade> eLista) {
         context = mainActivity;
         mLista = eLista;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

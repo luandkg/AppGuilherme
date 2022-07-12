@@ -1,13 +1,17 @@
-package com.luandkg.guilherme.horario;
+package com.luandkg.guilherme.escola;
 
 import android.os.Handler;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.luandkg.guilherme.escola.coisas.AtividadeEspecial;
+import com.luandkg.guilherme.escola.coisas.CargaDeTrabalho;
+import com.luandkg.guilherme.escola.coisas.TurmaItem;
+import com.luandkg.guilherme.escola.render.Temporizador;
 import com.luandkg.guilherme.utils.Threader;
 import com.luandkg.guilherme.utils.tempo.Calendario;
 import com.luandkg.guilherme.utils.tempo.Data;
-import com.luandkg.guilherme.utils.tempo.Tempo;
+import com.luandkg.guilherme.utils.tempo.TempoEstampa;
 
 import java.util.ArrayList;
 import java.util.Timer;

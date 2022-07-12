@@ -14,7 +14,6 @@ import com.luandkg.guilherme.escola.Escola;
 import com.luandkg.guilherme.escola.tempo.SEDF_22;
 import com.luandkg.guilherme.utils.tempo.Calendario;
 import com.luandkg.guilherme.utils.tempo.Data;
-import com.luandkg.guilherme.utils.tempo.Tempo;
 
 import java.util.ArrayList;
 

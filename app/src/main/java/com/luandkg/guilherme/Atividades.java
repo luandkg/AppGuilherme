@@ -16,7 +16,7 @@ import com.luandkg.guilherme.escola.metodo_avaliativo.Atividade;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
 import com.luandkg.guilherme.transferencias.RecarregadorDeAtividades;
 import com.luandkg.guilherme.utils.CaixaSimNao;
-import com.luandkg.guilherme.listas.onAtividadesDaTurma;
+import com.luandkg.guilherme.listas.Listar_AtividadesDaTurma;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -34,7 +34,7 @@ public class Atividades extends AppCompatActivity {
     private ListView ATIVIDADES_LISTAGEM;
 
     private ArrayList<Atividade> mAtividades;
-    private onAtividadesDaTurma onAtividadesDaTurma;
+    private Listar_AtividadesDaTurma Listar_AtividadesDaTurma;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +55,7 @@ public class Atividades extends AppCompatActivity {
 
 
         mAtividades = new ArrayList<Atividade>();
-        onAtividadesDaTurma = new onAtividadesDaTurma(this, mAtividades);
+        Listar_AtividadesDaTurma = new Listar_AtividadesDaTurma(this, mAtividades);
 
 
         atividades_carregar();
@@ -125,7 +125,7 @@ public class Atividades extends AppCompatActivity {
 
         }
 
-        ATIVIDADES_LISTAGEM.setAdapter(onAtividadesDaTurma);
+        ATIVIDADES_LISTAGEM.setAdapter(Listar_AtividadesDaTurma);
 
     }
 

@@ -1,7 +1,11 @@
-package com.luandkg.guilherme.horario;
+package com.luandkg.guilherme.escola;
 
+import com.luandkg.guilherme.escola.coisas.AtividadeEspecial;
+import com.luandkg.guilherme.escola.coisas.CargaDeTrabalho;
+import com.luandkg.guilherme.escola.coisas.TurmaItem;
 import com.luandkg.guilherme.utils.tempo.Calendario;
 import com.luandkg.guilherme.utils.tempo.Data;
+import com.luandkg.guilherme.utils.tempo.TempoEstampa;
 
 import java.util.ArrayList;
 
@@ -21,6 +25,7 @@ public class Professor {
     private TempoEstampa mAlmoco_Fim;
 
     private ArrayList<Data> mFerias;
+    private ArrayList<String> mTurmas;
 
     public Professor() {
 
@@ -39,11 +44,19 @@ public class Professor {
         mAlmoco_Fim = new TempoEstampa(0, 0);
 
         mFerias = new ArrayList<Data>();
+        mTurmas = new ArrayList<String>();
 
     }
 
+    public void adicionar_turma(String eTurma){
+        mTurmas.add(eTurma);
+    }
 
-    public String getNome() {
+    public  ArrayList<String> listar_turmas() {
+        return mTurmas;
+    }
+
+        public String getNome() {
         return mNome;
     }
 
@@ -399,5 +412,7 @@ public class Professor {
         return ret;
     }
 
-    public ArrayList<Data> getFerias(){return mFerias;}
+    public ArrayList<Data> getFerias() {
+        return mFerias;
+    }
 }

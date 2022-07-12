@@ -16,13 +16,13 @@ import com.luandkg.guilherme.R;
 
 import java.util.ArrayList;
 
-public class onNotas extends BaseAdapter {
+public class Listar_Notas extends BaseAdapter {
 
     private Context context;
     private ArrayList<AlunoResultado> mLista;
     private static LayoutInflater inflater = null;
 
-    public onNotas(Context mainActivity, ArrayList<AlunoResultado> eLista) {
+    public Listar_Notas(Context mainActivity, ArrayList<AlunoResultado> eLista) {
         context = mainActivity;
         mLista = eLista;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

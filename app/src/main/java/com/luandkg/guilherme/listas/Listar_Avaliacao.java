@@ -17,13 +17,13 @@ import com.luandkg.guilherme.escola.alunos.AlunoComNota;
 
 import java.util.ArrayList;
 
-public class onAvaliacao extends BaseAdapter {
+public class Listar_Avaliacao extends BaseAdapter {
 
     private Context context;
     private ArrayList<AlunoComNota> mLista;
     private static LayoutInflater inflater = null;
 
-    public onAvaliacao(Context mainActivity, ArrayList<AlunoComNota> eLista) {
+    public Listar_Avaliacao(Context mainActivity, ArrayList<AlunoComNota> eLista) {
         context = mainActivity;
         mLista = eLista;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

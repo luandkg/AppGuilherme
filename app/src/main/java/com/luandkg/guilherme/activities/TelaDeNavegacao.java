@@ -14,11 +14,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.luandkg.guilherme.R;
 import com.luandkg.guilherme.databinding.ActivityTelaDeNavegacaoBinding;
-import com.luandkg.guilherme.horario.NotificadorDeSinalEscolar;
-import com.luandkg.guilherme.horario.Notificar;
-import com.luandkg.guilherme.horario.Professor;
+import com.luandkg.guilherme.escola.NotificadorDeSinalEscolar;
+import com.luandkg.guilherme.escola.Professor;
 import com.luandkg.guilherme.professores.Professores;
 import com.luandkg.guilherme.utils.FS;
+import com.luandkg.guilherme.utils.Notificar;
 
 public class TelaDeNavegacao extends AppCompatActivity {
 

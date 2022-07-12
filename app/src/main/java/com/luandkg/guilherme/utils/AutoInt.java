@@ -1,4 +1,4 @@
-package com.luandkg.guilherme.Utils;
+package com.luandkg.guilherme.utils;
 
 public class AutoInt {
 
