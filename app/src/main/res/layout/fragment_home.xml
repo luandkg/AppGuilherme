@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activities.AvaliadorFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/BTN_TURMA_01"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="#4CAF50"
+            android:text="7H"
+
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/BTN_TURMA_02"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="#4CAF50"
+            android:text="7I"
+
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/BTN_TURMA_03"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="#4CAF50"
+            android:text="7J"
+
+            android:textSize="40dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/BTN_TURMA_04"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="#4CAF50"
+            android:text="7K"
+
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/BTN_TURMA_05"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="#4CAF50"
+            android:text="7L"
+
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/BTN_TURMA_06"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="#4CAF50"
+            android:text="7M"
+
+            android:textSize="40dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/BTN_TURMA_07"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="#4CAF50"
+            android:text="7N"
+
+            android:textSize="40dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/BTN_TURMA_08"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="#FDD835"
+            android:text="PD 7H"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/BTN_TURMA_09"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="#FDD835"
+            android:text="PD 7I"
+            android:textSize="40dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/BTN_RESUMO"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="#FF5722"
+            android:text="RELATÓRIO"
+            android:textSize="40dp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sistema_versao"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_margin="5dp"
+        android:text="0"
+        android:textSize="15dp"
+        android:textAlignment="center" />
+
+</LinearLayout>

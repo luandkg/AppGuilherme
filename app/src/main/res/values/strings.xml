@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">CED Estância III</string>
+    <string name="title_activity_tela_de_navegacao">TelaDeNavegacao</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Prof. Guilherme Gustavo</string>
+    <string name="nav_header_subtitle">CED Estância III</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Configurações</string>
+
+    <string name="menu_home">Avaliação</string>
+    <string name="menu_gallery">Horário</string>
+    <string name="menu_slideshow">Bimestre</string>
+    <string name="menu_semanas">Semanas</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_desempenho">Desempenho</string>
+</resources>

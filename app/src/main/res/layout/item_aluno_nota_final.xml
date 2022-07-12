@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_aluno_nota_final"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_margin="5dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/item_aluno_nota_final_nome"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="Nome"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/item_aluno_nota_final_atividades"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_margin="3dp"
+        android:text="0"
+        android:backgroundTint="#78909C"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/item_aluno_nota_final_atrasadas"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_margin="3dp"
+        android:text="0"
+        android:backgroundTint="#78909C"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/item_aluno_nota_final_nota"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_margin="3dp"
+        android:text="0"
+        android:backgroundTint="#78909C"
+        android:textSize="10dp" />
+
+
+</LinearLayout>

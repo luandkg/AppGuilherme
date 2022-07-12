@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_momento_avaliativo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/item_momento_avaliativo_aluno"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:text="Nome" />
+
+    <TextView
+        android:id="@+id/item_momento_avaliativo_data"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="10dp" />
+
+
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_turma_gg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/gg_turma_status"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:text=" "
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/gg_turma_nome"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:text="Nome" />
+
+    <Button
+        android:id="@+id/gg_turma_duplo"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:text="DUPLO"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/gg_sala"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:text=" "
+        android:textSize="10dp" />
+
+</LinearLayout>

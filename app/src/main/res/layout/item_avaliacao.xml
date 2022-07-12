@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_avaliacao"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_margin="5dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/item_avaliacao_nome"
+        android:layout_width="240dp"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="Nome"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/item_avaliacao_zero"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_margin="3dp"
+        android:text="NAO"
+        android:backgroundTint="#78909C"
+        android:textSize="10dp" />
+
+
+
+    <Button
+        android:id="@+id/item_avaliacao_excelente"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_margin="3dp"
+        android:text="SIM"
+        android:backgroundTint="#78909C"
+        android:textSize="10dp" />
+
+</LinearLayout>

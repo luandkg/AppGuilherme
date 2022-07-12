@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_atividade"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/item_atividade_imagem"
+        android:layout_gravity="center"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp" />
+
+    <LinearLayout
+        android:id="@+id/item_atividade_area1"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_atividade_nome"
+            android:layout_width="240dp"
+            android:layout_height="30dp"
+            android:text="Nome"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_atividade_status"
+            android:layout_width="240dp"
+            android:layout_height="30dp"
+            android:text="Nome"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_atividade_area2"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_atividade_tempo"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:text="11 de Nov"
+            android:textSize="12dp"
+            android:textAlignment="center" />
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
