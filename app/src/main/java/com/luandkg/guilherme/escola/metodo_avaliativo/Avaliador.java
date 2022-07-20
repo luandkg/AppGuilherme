@@ -1,15 +1,17 @@
 package com.luandkg.guilherme.escola.metodo_avaliativo;
 
 import com.luandkg.guilherme.Local;
-import com.luandkg.guilherme.dkg.DKG;
-import com.luandkg.guilherme.dkg.DKGObjeto;
+import com.luandkg.guilherme.TesteAlteradorDeData;
+import com.luandkg.guilherme.Versionador;
+import com.luandkg.guilherme.libs.dkg.DKG;
+import com.luandkg.guilherme.libs.dkg.DKGObjeto;
 import com.luandkg.guilherme.escola.alunos.Aluno;
 import com.luandkg.guilherme.escola.alunos.AlunoAtividade;
 import com.luandkg.guilherme.escola.alunos.AlunoResultado;
 import com.luandkg.guilherme.escola.tempo.ContandoData;
 import com.luandkg.guilherme.utils.FS;
-import com.luandkg.guilherme.utils.tempo.Calendario;
-import com.luandkg.guilherme.utils.tempo.Data;
+import com.luandkg.guilherme.libs.tempo.Calendario;
+import com.luandkg.guilherme.libs.tempo.Data;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -178,6 +180,11 @@ public class Avaliador {
 
                             String nota = proc.identifique("Nota").getValor();
                             String data = proc.identifique("Data").getValor();
+
+                            if (Versionador.isTeste()) {
+                                data = TesteAlteradorDeData.alterar(data);
+                            }
+
 
                             if (nota.contentEquals(ATIVIDADE_SIM)) {
                                 atividade_realizada = true;
@@ -362,6 +369,7 @@ public class Avaliador {
         ArrayList<ContandoData> contadores = new ArrayList<ContandoData>();
         for (Data data : quais_datas) {
             contadores.add(new ContandoData(data.getTempo()));
+            System.out.println("CRIANDO CONTADOR :: " + data.getTempo());
         }
 
         for (File atividade : FS.getListaDeArquivos(Local.LOCAL_AVALIACOES)) {
@@ -371,8 +379,8 @@ public class Avaliador {
 
             dkg_atividade.abrir(atividade.getAbsolutePath());
 
-            // System.out.println("-->> " + atividade.getName());
-            // System.out.println(dkg_atividade.toString());
+            System.out.println("-->> " + atividade.getName());
+            System.out.println(dkg_atividade.toString());
 
             DKGObjeto atividade_cabecalho = dkg_atividade.unicoObjeto("Atividade");
 
@@ -381,10 +389,16 @@ public class Avaliador {
                 for (DKGObjeto proc : atividade_cabecalho.getObjetos()) {
                     if (aluno.getID().contentEquals(proc.identifique("ID").getValor())) {
 
-                        System.out.println("ENCONTREI :: " + aluno.getID());
 
                         String nota = proc.identifique("Nota").getValor();
                         String data = proc.identifique("Data").getValor();
+
+                        if (Versionador.isTeste()) {
+                            data = TesteAlteradorDeData.alterar(data);
+
+                            System.out.println("ENCONTREI :: " + aluno.getID() + " :: " + data);
+                        }
+
 
                         if (nota.contentEquals(ATIVIDADE_SIM)) {
                             for (ContandoData cont : contadores) {
@@ -404,6 +418,12 @@ public class Avaliador {
             }
 
 
+        }
+
+        if (Versionador.isTeste()) {
+            for (ContandoData contador : contadores) {
+                System.out.println("MOSTRANDO CONTADOR :: " + contador.getData() + " -->> " + contador.getValor());
+            }
         }
 
         return contadores;

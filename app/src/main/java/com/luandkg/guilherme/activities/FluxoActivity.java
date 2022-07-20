@@ -8,12 +8,13 @@ import android.widget.TextView;
 
 import com.luandkg.guilherme.R;
 import com.luandkg.guilherme.escola.alunos.Aluno;
-import com.luandkg.guilherme.escola.render.Fluxo;
+import com.luandkg.guilherme.escola.render.BimestreImagem;
+import com.luandkg.guilherme.escola.render.FluxoDeEntrega;
 import com.luandkg.guilherme.escola.tempo.BimestreTemporal;
 import com.luandkg.guilherme.escola.Escola;
 import com.luandkg.guilherme.escola.tempo.SEDF_22;
-import com.luandkg.guilherme.utils.tempo.Calendario;
-import com.luandkg.guilherme.utils.tempo.Data;
+import com.luandkg.guilherme.libs.tempo.Calendario;
+import com.luandkg.guilherme.libs.tempo.Data;
 
 import java.util.ArrayList;
 
@@ -50,13 +51,13 @@ public class FluxoActivity extends AppCompatActivity {
         }
 
 
-        FLUXO_IV_ATIVIDADES.setImageBitmap(Fluxo.criarFluxoDeEntrega(alunos, datas));
+        FLUXO_IV_ATIVIDADES.setImageBitmap(FluxoDeEntrega.criarFluxoDeEntrega(alunos, datas));
 
 
         int acabar = BimestreTemporal.getDiasParaAcabar(hoje, datas);
         int progresso = BimestreTemporal.getPorcentagem(hoje, datas);
 
-        FLUXO_IV_TEMPO.setImageBitmap(Fluxo.onBimestre(progresso, acabar));
+        FLUXO_IV_TEMPO.setImageBitmap(BimestreImagem.onBimestre(progresso, acabar));
 
 
     }

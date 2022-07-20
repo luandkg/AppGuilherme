@@ -10,7 +10,7 @@ import android.graphics.RectF;
 import com.luandkg.guilherme.escola.Professor;
 import com.luandkg.guilherme.escola.coisas.AtividadeEspecial;
 import com.luandkg.guilherme.escola.utils.PaletaDeCores;
-import com.luandkg.guilherme.utils.tempo.Calendario;
+import com.luandkg.guilherme.libs.tempo.Calendario;
 
 import java.util.ArrayList;
 

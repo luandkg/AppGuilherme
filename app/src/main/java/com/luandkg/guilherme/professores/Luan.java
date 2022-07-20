@@ -3,9 +3,9 @@ package com.luandkg.guilherme.professores;
 import com.luandkg.guilherme.escola.coisas.AtividadeEspecial;
 import com.luandkg.guilherme.escola.tempo.Horario;
 import com.luandkg.guilherme.escola.Professor;
-import com.luandkg.guilherme.utils.tempo.Calendario;
-import com.luandkg.guilherme.utils.tempo.TempoEstampa;
-import com.luandkg.guilherme.utils.tempo.TempoEstampaDuracao;
+import com.luandkg.guilherme.libs.tempo.Calendario;
+import com.luandkg.guilherme.libs.tempo.TempoEstampa;
+import com.luandkg.guilherme.libs.tempo.TempoEstampaDuracao;
 
 
 public class Luan {

@@ -1,8 +1,8 @@
 package com.luandkg.guilherme.escola.metodo_avaliativo;
 
 import com.luandkg.guilherme.Local;
-import com.luandkg.guilherme.dkg.DKG;
-import com.luandkg.guilherme.dkg.DKGObjeto;
+import com.luandkg.guilherme.libs.dkg.DKG;
+import com.luandkg.guilherme.libs.dkg.DKGObjeto;
 import com.luandkg.guilherme.escola.alunos.AlunoComNota;
 import com.luandkg.guilherme.utils.FS;
 

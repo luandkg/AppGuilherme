@@ -6,8 +6,8 @@ import android.os.Handler;
 import com.luandkg.guilherme.escola.coisas.AtividadeEspecial;
 import com.luandkg.guilherme.escola.coisas.CargaDeTrabalho;
 import com.luandkg.guilherme.escola.coisas.TurmaItem;
-import com.luandkg.guilherme.utils.tempo.Calendario;
-import com.luandkg.guilherme.utils.tempo.Data;
+import com.luandkg.guilherme.libs.tempo.Calendario;
+import com.luandkg.guilherme.libs.tempo.Data;
 
 import java.util.ArrayList;
 import java.util.Timer;

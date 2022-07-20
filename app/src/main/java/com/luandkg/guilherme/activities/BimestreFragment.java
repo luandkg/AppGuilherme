@@ -10,14 +10,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.luandkg.guilherme.escola.render.Fluxo;
+import com.luandkg.guilherme.escola.Professor;
+import com.luandkg.guilherme.escola.render.BimestreImagem;
 import com.luandkg.guilherme.databinding.FragmentSlideshowBinding;
 import com.luandkg.guilherme.escola.alunos.Aluno;
+import com.luandkg.guilherme.escola.render.FluxoDeEntrega;
 import com.luandkg.guilherme.escola.tempo.BimestreTemporal;
 import com.luandkg.guilherme.escola.Escola;
 import com.luandkg.guilherme.escola.tempo.SEDF_22;
-import com.luandkg.guilherme.utils.tempo.Calendario;
-import com.luandkg.guilherme.utils.tempo.Data;
+import com.luandkg.guilherme.professores.Professores;
+import com.luandkg.guilherme.libs.tempo.Calendario;
+import com.luandkg.guilherme.libs.tempo.Data;
 
 import java.util.ArrayList;
 
@@ -54,13 +57,29 @@ public class BimestreFragment extends Fragment {
         }
 
 
-        FLUXO_IV_ATIVIDADES.setImageBitmap(Fluxo.criarFluxoDeEntrega(alunos, datas));
+        FLUXO_IV_ATIVIDADES.setImageBitmap(FluxoDeEntrega.criarFluxoDeEntrega(alunos, datas));
+
+        Professor mProfessor = Professores.getProfessorCorrente();
+
+        String HOJE_DATA = Calendario.getADM();
+
+        if (mProfessor.estou_em_ferias(Data.toData(HOJE_DATA))) {
 
 
-        int acabar = BimestreTemporal.getDiasParaAcabar(hoje, datas);
-        int progresso = BimestreTemporal.getPorcentagem(hoje, datas);
+            FLUXO_IV_TEMPO.setImageBitmap(BimestreImagem.onFerias(mProfessor.ferias_passou(Data.toData(HOJE_DATA)), mProfessor.getFerias().size(),"FÉRIAS"));
 
-        FLUXO_IV_TEMPO.setImageBitmap(Fluxo.onBimestre(progresso, acabar));
+            TV_BIMESTRE_INICIO.setText(Calendario.filtrar_primeira(mProfessor.getFerias()).getTempoLegivel());
+            TV_BIMESTRE_FIM.setText(Calendario.filtrar_ultima(mProfessor.getFerias()).getTempoLegivel());
+
+        } else {
+
+            int acabar = BimestreTemporal.getDiasParaAcabar(hoje, datas);
+            int progresso = BimestreTemporal.getPorcentagem(hoje, datas);
+
+            FLUXO_IV_TEMPO.setImageBitmap(BimestreImagem.onBimestre(progresso, acabar));
+
+        }
+
 
 
         return root;

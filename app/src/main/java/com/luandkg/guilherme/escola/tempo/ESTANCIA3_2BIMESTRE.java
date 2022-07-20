@@ -1,10 +1,9 @@
 package com.luandkg.guilherme.escola.tempo;
 
 
-import com.luandkg.guilherme.escola.tempo.SemanaContinua;
-import com.luandkg.guilherme.utils.tempo.Calendario;
-import com.luandkg.guilherme.utils.tempo.Data;
-import com.luandkg.guilherme.utils.tempo.DiaSemanal;
+import com.luandkg.guilherme.libs.tempo.Calendario;
+import com.luandkg.guilherme.libs.tempo.Data;
+import com.luandkg.guilherme.libs.tempo.DiaSemanal;
 
 import java.util.ArrayList;
 

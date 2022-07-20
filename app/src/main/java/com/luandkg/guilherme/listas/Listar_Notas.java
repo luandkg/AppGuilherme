@@ -2,6 +2,7 @@ package com.luandkg.guilherme.listas;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,10 +64,25 @@ public class Listar_Notas extends BaseAdapter {
 
 
         TextView nome = (TextView) rowView.findViewById(R.id.item_aluno_nota_final_nome);
-        Button nota = (Button) rowView.findViewById(R.id.item_aluno_nota_final_nota);
+
+        Button nota_total = (Button) rowView.findViewById(R.id.item_aluno_nota_final_atividades);
+        Button nota_atrasadas = (Button) rowView.findViewById(R.id.item_aluno_nota_final_atrasadas);
+        Button nota_final = (Button) rowView.findViewById(R.id.item_aluno_nota_final_nota);
+
+
 
         nome.setText(aluno.getNome());
-        nota.setText(aluno.getNotaFinal());
+
+        nota_total.setText(aluno.getNotaCompleta());
+        nota_atrasadas.setText(aluno.getNotaAtrasadas());
+        nota_final.setText(aluno.getNotaFinal());
+
+        if (aluno.getNotaFinalDouble()>=5){
+            nota_final.setBackgroundColor(Color.parseColor("#43a047"));
+        }else{
+            nota_final.setBackgroundColor(Color.parseColor("#f4511e"));
+        }
+
 
         rowView.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -66,6 +66,10 @@ public class Matematica {
         return numero;
     }
 
+    public static String getNumeroRealPTBR(double eNotaCompleta){
+        return  getNumeroReal2C(String.valueOf(eNotaCompleta).replace(".", ","));
+    }
+
     public static String getNumeroReal2C(String s) {
 
         int i = 0;

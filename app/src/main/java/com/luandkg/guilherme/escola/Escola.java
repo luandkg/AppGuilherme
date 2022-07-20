@@ -1,8 +1,9 @@
 package com.luandkg.guilherme.escola;
 
 import com.luandkg.guilherme.Local;
-import com.luandkg.guilherme.dkg.DKG;
-import com.luandkg.guilherme.dkg.DKGObjeto;
+import com.luandkg.guilherme.Versionador;
+import com.luandkg.guilherme.libs.dkg.DKG;
+import com.luandkg.guilherme.libs.dkg.DKGObjeto;
 import com.luandkg.guilherme.escola.alunos.Aluno;
 import com.luandkg.guilherme.escola.alunos.AlunoAtividade;
 import com.luandkg.guilherme.escola.alunos.AlunoComNota;
@@ -60,10 +61,13 @@ public class Escola {
             eDocumento.salvar(eArquivoLocal);
         }
 
+        if (Versionador.isTeste()){
 
-       // fakes(mAlunos);
+            System.out.println("Adicionar Teste");
 
-        System.out.println("Carregar :: Alunos " + mAlunos.size());
+            fakes(mAlunos);
+        }
+
 
         return mAlunos;
     }
@@ -142,8 +146,7 @@ public class Escola {
     }
 
 
-
-    public static ArrayList<AlunoResultado> getAlunosComResultadoDaEscola( ) {
+    public static ArrayList<AlunoResultado> getAlunosComResultadoDaEscola() {
 
         ArrayList<AlunoResultado> mAlunos = new ArrayList<AlunoResultado>();
 
@@ -152,12 +155,11 @@ public class Escola {
         for (Aluno aluno : getAlunos()) {
 
 
-                String eVisibilidade = aluno.getVisibilidade();
+            String eVisibilidade = aluno.getVisibilidade();
 
-                if (eVisibilidade.contentEquals("SIM")) {
-                    mAlunos.add(new AlunoResultado(aluno.getID(), aluno.getTurma(), aluno.getNome()));
-                }
-
+            if (eVisibilidade.contentEquals("SIM")) {
+                mAlunos.add(new AlunoResultado(aluno.getID(), aluno.getTurma(), aluno.getNome()));
+            }
 
 
         }
@@ -165,7 +167,7 @@ public class Escola {
         return mAlunos;
     }
 
-    public static ArrayList<AlunoAtividade> getAlunosComAtividadesDaEscola( ) {
+    public static ArrayList<AlunoAtividade> getAlunosComAtividadesDaEscola() {
 
         ArrayList<AlunoAtividade> mAlunos = new ArrayList<AlunoAtividade>();
 
@@ -177,9 +179,8 @@ public class Escola {
             String eVisibilidade = aluno.getVisibilidade();
 
             if (eVisibilidade.contentEquals("SIM")) {
-                mAlunos.add(new AlunoAtividade(aluno.getID(), aluno.getTurma(), aluno.getNome(),"",""));
+                mAlunos.add(new AlunoAtividade(aluno.getID(), aluno.getTurma(), aluno.getNome(), "", ""));
             }
-
 
 
         }

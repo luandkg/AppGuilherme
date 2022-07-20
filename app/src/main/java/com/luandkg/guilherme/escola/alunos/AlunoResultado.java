@@ -1,6 +1,9 @@
 package com.luandkg.guilherme.escola.alunos;
 
+import com.luandkg.guilherme.TesteAlteradorDeData;
+import com.luandkg.guilherme.Versionador;
 import com.luandkg.guilherme.escola.metodo_avaliativo.AtividadeRealizada;
+import com.luandkg.guilherme.libs.tempo.Data;
 import com.luandkg.guilherme.utils.Matematica;
 
 import java.util.ArrayList;
@@ -16,6 +19,9 @@ public class AlunoResultado {
     private String mNotaFinal;
     private double mNotaFinalDouble;
 
+    private String mNotaCompleta;
+    private String mNotaAtrasadas;
+
     private ArrayList<AtividadeRealizada> mAtividadesLista;
 
     public AlunoResultado(String eID, String eTurma, String eNome) {
@@ -27,6 +33,9 @@ public class AlunoResultado {
         mRealizadas = 0;
 
         mNotaFinal = "";
+        mNotaCompleta = "";
+        mNotaAtrasadas = "";
+
         mNotaFinalDouble = 0.0;
 
         mAtividadesLista = new ArrayList<AtividadeRealizada>();
@@ -50,6 +59,9 @@ public class AlunoResultado {
             mRealizadas += 1;
         }
 
+
+
+
         mAtividadesLista.add(new AtividadeRealizada(eData, eArquivo, eDataEntregue, realizada));
     }
 
@@ -61,7 +73,7 @@ public class AlunoResultado {
         boolean ret = false;
 
         for (AtividadeRealizada atv : mAtividadesLista) {
-            if (atv.getData().contentEquals(eData)) {
+            if (Data.toData(atv.getData()).isIgual(Data.toData(eData))) {
                 if (atv.getStatus()) {
                     ret = true;
                 }
@@ -84,7 +96,7 @@ public class AlunoResultado {
     public void calcular(double maximo) {
 
         double tx = (double) maximo / (double) mAtividades;
-        double vl = (double) mRealizadas * tx;
+        double eNotaCompleta = (double) mRealizadas * tx;
 
         boolean temAtrasadas = false;
         int atrasadas_quantidade = 0;
@@ -100,23 +112,45 @@ public class AlunoResultado {
             }
         }
 
-        double va = (double)atrasadas_quantidade * (tx/4.0);
+        if (Versionador.isTeste()){
+            if (mNome.contentEquals("RENANO DALI")){
+                atrasadas_quantidade=0;
+            }
+        }
 
-        String s1 = Matematica.getNumeroReal2C(String.valueOf((vl)).replace(".", ","));
-        String s2 = Matematica.getNumeroReal2C(String.valueOf((vl - va)).replace(".", ","));
+
+        double descontar_atrasadas = (double) atrasadas_quantidade * (tx / 4.0);
+
+        mNotaFinalDouble = eNotaCompleta - descontar_atrasadas;
+
+
+        mNotaCompleta = Matematica.getNumeroRealPTBR(eNotaCompleta);
+        mNotaFinal = Matematica.getNumeroRealPTBR(mNotaFinalDouble);
 
 
         System.out.println("Aluno : " + mNome);
-        System.out.println("\t - Nota : " + s1);
+        System.out.println("\t - Nota : " + mNotaCompleta);
         System.out.println("\t - Tem atrasadas : " + tem);
+
         if (temAtrasadas) {
+
+            mNotaAtrasadas = Matematica.getNumeroRealPTBR(descontar_atrasadas);
+
             System.out.println("\t - Atrasadas : " + atrasadas_quantidade);
-            System.out.println("\t - Descontar : " + String.valueOf(va).replace(".", ","));
-            System.out.println("\t - Nova Nota : " + s2);
+            System.out.println("\t - Descontar : " + mNotaAtrasadas);
+            System.out.println("\t - Nova Nota : " + mNotaFinal);
+
+
         }
 
-        mNotaFinal = Matematica.getNumeroReal2C(String.valueOf((vl)).replace(".", ","));
-        mNotaFinalDouble = vl;
+    }
+
+    public String getNotaCompleta() {
+        return mNotaCompleta;
+    }
+
+    public String getNotaAtrasadas() {
+        return mNotaAtrasadas;
     }
 
     public String getNotaFinal() {

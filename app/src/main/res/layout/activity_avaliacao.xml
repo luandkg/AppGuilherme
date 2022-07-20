@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".Avaliacao">
+    tools:context=".activities.AvaliacaoActivity">
 
     <TextView
         android:id="@+id/AVALIACAO_TITULO"

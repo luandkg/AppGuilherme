@@ -1,12 +1,11 @@
 package com.luandkg.guilherme.escola.metodo_avaliativo;
 
 import com.luandkg.guilherme.Local;
-import com.luandkg.guilherme.dkg.DKG;
-import com.luandkg.guilherme.dkg.DKGObjeto;
+import com.luandkg.guilherme.libs.dkg.DKG;
+import com.luandkg.guilherme.libs.dkg.DKGObjeto;
 import com.luandkg.guilherme.escola.Escola;
 import com.luandkg.guilherme.escola.alunos.Aluno;
 import com.luandkg.guilherme.escola.alunos.AlunoPerfil;
-import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
 import com.luandkg.guilherme.escola.tempo.SemanaContinua;
 import com.luandkg.guilherme.utils.FS;
 import com.luandkg.guilherme.utils.Strings;

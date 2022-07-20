@@ -11,7 +11,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.luandkg.guilherme.Atividades;
 import com.luandkg.guilherme.Local;
 import com.luandkg.guilherme.Versionador;
 import com.luandkg.guilherme.databinding.FragmentHomeBinding;
@@ -41,19 +40,22 @@ public class AvaliadorFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        BTN_TURMA_H =binding.BTNTURMA01;
+        BTN_TURMA_H = binding.BTNTURMA01;
         BTN_TURMA_I = binding.BTNTURMA02;
         BTN_TURMA_J = binding.BTNTURMA03;
         BTN_TURMA_K = binding.BTNTURMA04;
-        BTN_TURMA_L =binding.BTNTURMA05;
+        BTN_TURMA_L = binding.BTNTURMA05;
         BTN_TURMA_M = binding.BTNTURMA06;
         BTN_TURMA_N = binding.BTNTURMA07;
 
-        BTN_TURMA_PD_H = binding.BTNTURMA08;;
-        BTN_TURMA_PD_I = binding.BTNTURMA09;;
+        BTN_TURMA_PD_H = binding.BTNTURMA08;
 
-        BTN_RESUMO = binding.BTNRESUMO;;
-        TXT_VERSAO=binding.sistemaVersao;
+        BTN_TURMA_PD_I = binding.BTNTURMA09;
+
+
+        BTN_RESUMO = binding.BTNRESUMO;
+
+        TXT_VERSAO = binding.sistemaVersao;
 
         Local.organizarPastas();
 
@@ -80,7 +82,11 @@ public class AvaliadorFragment extends Fragment {
             }
         });
 
-        TXT_VERSAO.setText(Versionador.VERSAO);
+        Versionador eVersionador = new Versionador();
+
+        eVersionador.init();
+
+        TXT_VERSAO.setText(eVersionador.getVersaoCompletaComAutor());
 
         return root;
     }
@@ -91,7 +97,7 @@ public class AvaliadorFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(v.getContext(), Atividades.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                Intent intent = new Intent(v.getContext(), AtividadesActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
                 intent.putExtra("TURMA", eTurma);
 

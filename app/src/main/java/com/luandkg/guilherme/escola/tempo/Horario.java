@@ -1,8 +1,8 @@
 package com.luandkg.guilherme.escola.tempo;
 
 
-import com.luandkg.guilherme.utils.tempo.TempoEstampa;
-import com.luandkg.guilherme.utils.tempo.TempoEstampaDuracao;
+import com.luandkg.guilherme.libs.tempo.TempoEstampa;
+import com.luandkg.guilherme.libs.tempo.TempoEstampaDuracao;
 
 public class Horario {
 

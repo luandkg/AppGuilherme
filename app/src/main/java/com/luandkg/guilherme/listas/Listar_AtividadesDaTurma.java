@@ -10,11 +10,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import com.luandkg.guilherme.Avaliacao;
+import com.luandkg.guilherme.activities.AvaliacaoActivity;
 import com.luandkg.guilherme.escola.metodo_avaliativo.CicloDeAvaliacao;
 import com.luandkg.guilherme.R;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Atividade;
-import com.luandkg.guilherme.utils.tempo.Calendario;
+import com.luandkg.guilherme.libs.tempo.Calendario;
 
 import java.util.ArrayList;
 
@@ -82,7 +82,7 @@ public class Listar_AtividadesDaTurma extends BaseAdapter {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(v.getContext(), Avaliacao.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                Intent intent = new Intent(v.getContext(), AvaliacaoActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
                 intent.putExtra("TURMA", atividade.getTurma());
                 intent.putExtra("ATIVIDADE", atividade.getArquivo());

@@ -5,14 +5,60 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 
+import com.luandkg.guilherme.escola.alunos.Aluno;
 import com.luandkg.guilherme.escola.metodo_avaliativo.AtividadeRealizada;
+import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
+import com.luandkg.guilherme.escola.tempo.ContandoData;
 import com.luandkg.guilherme.escola.tempo.ESTANCIA3_2BIMESTRE;
 import com.luandkg.guilherme.escola.tempo.SemanaContinua;
-import com.luandkg.guilherme.utils.tempo.Data;
+import com.luandkg.guilherme.libs.tempo.Data;
 
 import java.util.ArrayList;
 
 public class FluxoDeEntrega {
+
+    public static Bitmap criarFluxoDeEntrega(ArrayList<Aluno> alunos, ArrayList<Data> quais_datas ) {
+
+        ArrayList<ContandoData> contadores = Avaliador.getFluxoDeEntrega(alunos,quais_datas);
+
+
+        int w = 350;
+        int h = 300;
+
+        Bitmap bmp = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bmp);
+
+        Paint pintor_atividades = new Paint();
+        pintor_atividades.setColor(Color.parseColor("#689F38"));
+
+
+        Paint paint2 = new Paint();
+        paint2.setColor(Color.WHITE);
+        paint2.setTextSize(200);
+
+
+        int eixo_x = 0;
+
+        int coluna_largura = w / quais_datas.size();
+
+
+        for (ContandoData contador : contadores) {
+
+
+            if (contador.getValor() > 0) {
+
+                int coluna_altura = (contador.getValor() * 3);
+
+                canvas.drawRect(eixo_x, h - coluna_altura, eixo_x + coluna_largura, h, pintor_atividades);
+            }
+
+            eixo_x += coluna_largura;
+        }
+
+
+        return bmp;
+
+    }
 
 
     public static Bitmap criarFluxoDeEntregaDoAluno(ArrayList<Data> quais_datas, ArrayList<AtividadeRealizada> mAtividades) {

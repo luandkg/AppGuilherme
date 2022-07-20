@@ -1,6 +1,6 @@
 package com.luandkg.guilherme.escola.coisas;
 
-import com.luandkg.guilherme.utils.tempo.TempoEstampa;
+import com.luandkg.guilherme.libs.tempo.TempoEstampa;
 
 import java.util.ArrayList;
 

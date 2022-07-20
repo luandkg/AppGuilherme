@@ -2,7 +2,7 @@ package com.luandkg.guilherme.escola.metodo_avaliativo;
 
 import com.luandkg.guilherme.escola.alunos.AlunoAtividade;
 import com.luandkg.guilherme.escola.alunos.AlunoResultado;
-import com.luandkg.guilherme.utils.tempo.Data;
+import com.luandkg.guilherme.libs.tempo.Data;
 
 import java.util.ArrayList;
 
@@ -19,6 +19,12 @@ public class AtividadesAnalisador {
 
             for (AlunoResultado aluno : alunos) {
 
+                int enc = 0;
+
+                for(AtividadeRealizada atv : aluno.getAtividadesRealizadas()){
+                    System.out.println("\t - ATV :: " + atv.getData());
+                }
+
                 if (aluno.temAtividadeSim(eData.getTempo())) {
 
                     String s_id = String.valueOf(aluno.getID());
@@ -29,8 +35,10 @@ public class AtividadesAnalisador {
                     }
 
                     System.out.println("DT :: " + eData.getFluxo() + " -->> " + aluno.getNome());
-
+                    enc += 1;
                 }
+
+                System.out.println("Procurando data :: " + eData.getTempo() + " :: " + aluno.getAtividadesRealizadas().size() + " -->> " + enc);
 
             }
         }

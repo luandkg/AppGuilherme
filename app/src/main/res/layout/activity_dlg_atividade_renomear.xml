@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".DlgAtividadeRenomear">
+    tools:context=".activities.DlgAtividadeRenomear">
 
     <TextView
         android:layout_width="match_parent"

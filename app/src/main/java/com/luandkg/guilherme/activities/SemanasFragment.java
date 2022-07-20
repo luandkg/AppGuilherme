@@ -22,7 +22,6 @@ import com.luandkg.guilherme.escola.metodo_avaliativo.AtividadesAnalisador;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
 import com.luandkg.guilherme.escola.tempo.ESTANCIA3_2BIMESTRE;
 import com.luandkg.guilherme.escola.Escola;
-import com.luandkg.guilherme.escola.GGTurmas;
 import com.luandkg.guilherme.escola.tempo.SemanaContinua;
 import com.luandkg.guilherme.escola.tempo.SemanaContinuaCarregada;
 import com.luandkg.guilherme.listas.Itenizador;
@@ -30,7 +29,7 @@ import com.luandkg.guilherme.listas.ListaGenerica;
 import com.luandkg.guilherme.professores.Guilherme;
 import com.luandkg.guilherme.utils.Widget;
 import com.luandkg.guilherme.utils.Strings;
-import com.luandkg.guilherme.utils.tempo.Data;
+import com.luandkg.guilherme.libs.tempo.Data;
 
 import java.util.ArrayList;
 
