@@ -2,4 +2,4 @@
 
 Aplicativo de organização de atividades
 
-![App - Tela Principal](http://url/to/img.png)
+![App - Tela Principal](https://github.com/luandkg/AppGuilherme/blob/main/assets/app.png?raw=true)
