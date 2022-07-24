@@ -180,6 +180,12 @@ public class Avaliador {
 
                             String nota = proc.identifique("Nota").getValor();
                             String data = proc.identifique("Data").getValor();
+                            String atestado = proc.identifique("Atestado").getValor();
+
+                            boolean teve_atestado = false;
+                            if(atestado.contentEquals("SIM")){
+                                teve_atestado=true;
+                            }
 
                             if (Versionador.isTeste()) {
                                 data = TesteAlteradorDeData.alterar(data);
@@ -211,7 +217,7 @@ public class Avaliador {
 
                             }
 
-                            aluno.avaliar(ATIVIDADE_DATA, ATIVIDADE_ARQUIVO, data, atividade_realizada);
+                            aluno.avaliar(ATIVIDADE_DATA, ATIVIDADE_ARQUIVO, data, atividade_realizada,teve_atestado);
 
                             break;
                         }

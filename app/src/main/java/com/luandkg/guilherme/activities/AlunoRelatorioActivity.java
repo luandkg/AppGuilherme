@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.luandkg.guilherme.R;
 import com.luandkg.guilherme.escola.alunos.AlunoPerfil;
 import com.luandkg.guilherme.escola.tempo.ESTANCIA3_2BIMESTRE;
+import com.luandkg.guilherme.escola.tempo.ESTANCIA3_3BIMESTRE;
 import com.luandkg.guilherme.escola.render.FluxoDeEntrega;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Perfilizar;
 
@@ -42,7 +43,7 @@ public class AlunoRelatorioActivity extends AppCompatActivity {
         TV_Aluno.setText(perfil.getNome());
         TV_AlunoNota.setText(perfil.getNotaFinal());
 
-         IV_Aluno.setImageBitmap(FluxoDeEntrega.criarFluxoDeEntregaDoAluno(ESTANCIA3_2BIMESTRE.getBimestre(), perfil.getAtividadesRealizadas()));
+        IV_Aluno.setImageBitmap(FluxoDeEntrega.criarFluxoDeEntregaDoAluno(ESTANCIA3_2BIMESTRE.getBimestre(), perfil.getAtividadesRealizadas()));
 
         //   LV_Semanas.setAdapter(new Lista_SemanaAvaliacao(getBaseContext(), perfil.getSemanas()));
 

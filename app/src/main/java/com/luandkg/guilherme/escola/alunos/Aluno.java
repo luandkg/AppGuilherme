@@ -6,13 +6,15 @@ public class Aluno {
     private String mTurma;
     private String mNome;
     private String mVisibilidade;
+    private String mAtestado;
 
-    public Aluno(String eID,String eTurma , String eNome , String eVisibilidade) {
+    public Aluno(String eID,String eTurma , String eNome , String eVisibilidade,String eAtestado) {
         mID = eID;
 
         mTurma = eTurma;
         mNome = eNome;
         mVisibilidade = eVisibilidade;
+        mAtestado=eAtestado;
     }
 
     public String getID() {
@@ -32,7 +34,9 @@ public class Aluno {
     public String getVisibilidade() {
         return mVisibilidade;
     }
-
+    public String getAtestado() {
+        return mAtestado;
+    }
 
 
     public void mudarVisibilidade() {

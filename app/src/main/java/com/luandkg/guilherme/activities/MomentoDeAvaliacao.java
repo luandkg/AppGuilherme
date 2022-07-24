@@ -18,6 +18,7 @@ import com.luandkg.guilherme.escola.alunos.AlunoAtividade;
 import com.luandkg.guilherme.escola.metodo_avaliativo.AtividadeGraficos;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
 import com.luandkg.guilherme.escola.tempo.ESTANCIA3_2BIMESTRE;
+import com.luandkg.guilherme.escola.tempo.ESTANCIA3_3BIMESTRE;
 import com.luandkg.guilherme.escola.Escola;
 import com.luandkg.guilherme.escola.tempo.SemanaContinua;
 import com.luandkg.guilherme.escola.utils.PaletaDeCores;
@@ -56,8 +57,8 @@ public class MomentoDeAvaliacao extends AppCompatActivity {
 
         mTitulo.setText(mSemana);
 
-        ArrayList<SemanaContinua> semanas = ESTANCIA3_2BIMESTRE.getSemanas();
-        ArrayList<Data> SEGUNDO_BIMESTRE = ESTANCIA3_2BIMESTRE.getBimestre();
+        ArrayList<SemanaContinua> LISTA_DE_SEMANAS = ESTANCIA3_2BIMESTRE.getSemanas();
+        ArrayList<Data> TERCEIRO_BIMESTRE = ESTANCIA3_2BIMESTRE.getBimestre();
 
         ArrayList<Aluno> mAlunos = Escola.getAlunosVisiveis();
 
@@ -68,13 +69,13 @@ public class MomentoDeAvaliacao extends AppCompatActivity {
         }
 
 
-        if (semanas.size() >= index) {
+        if (LISTA_DE_SEMANAS.size() >= index) {
 
 
-            if (index < semanas.size()) {
-                mTitulo.setText(semanas.get(index).getStatus());
+            if (index < LISTA_DE_SEMANAS.size()) {
+                mTitulo.setText(LISTA_DE_SEMANAS.get(index).getStatus());
 
-                SemanaContinua semana = semanas.get(index);
+                SemanaContinua semana = LISTA_DE_SEMANAS.get(index);
 
 
                 ArrayList<AlunoAtividade> avaliados = new ArrayList<AlunoAtividade>();

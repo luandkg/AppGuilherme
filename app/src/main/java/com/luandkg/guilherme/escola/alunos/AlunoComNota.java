@@ -9,14 +9,16 @@ public class AlunoComNota {
     private String mNome;
     private String mNota;
     private String mData;
+    private String mAtestado;
 
-    public AlunoComNota(String eID, String eTurma, String eNome, String eNota, String eData) {
+    public AlunoComNota(String eID, String eTurma, String eNome, String eNota, String eAtestado, String eData) {
         mID = eID;
 
         mTurma = eTurma;
         mNome = eNome;
         mNota = eNota;
         mData = eData;
+        mAtestado = eAtestado;
 
     }
 
@@ -41,6 +43,15 @@ public class AlunoComNota {
         mNota = e;
     }
 
+    public void setAtestado(String e) {
+        mAtestado = e;
+    }
+
+    public String getAtestado() {
+        return mAtestado;
+    }
+
+
     public String getData() {
         return mData;
     }
@@ -51,11 +62,24 @@ public class AlunoComNota {
 
     public void mudarNota(String eNota) {
 
+        if (mNota.contentEquals("SIM") && eNota.contentEquals("SIM")) {
+            if (mAtestado.contentEquals("SIM")) {
+                mAtestado = "NAO";
+            } else {
+                mAtestado = "SIM";
+            }
+        }
+
         if (!mNota.contentEquals(eNota)) {
             mNota = eNota;
             mData = Calendario.getADM();
         }
 
+
+    }
+
+    public boolean isDeAtestado() {
+        return mAtestado.contentEquals("SIM");
     }
 
 }

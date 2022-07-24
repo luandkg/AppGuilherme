@@ -46,13 +46,14 @@ public class Escola {
                 String eTurma = ePacote.identifique("Turma").getValor();
                 String eNome = ePacote.identifique("Nome").getValor();
                 String eVisibilidade = ePacote.identifique("Visibilidade").getValor();
+                String eAtestado = ePacote.identifique("Atestado").getValor();
 
 
                 if (eVisibilidade.length() == 0) {
                     eVisibilidade = "SIM";
                 }
 
-                mAlunos.add(new Aluno(eID, eTurma, eNome, eVisibilidade));
+                mAlunos.add(new Aluno(eID, eTurma, eNome, eVisibilidade,eAtestado));
 
             }
 
@@ -61,7 +62,7 @@ public class Escola {
             eDocumento.salvar(eArquivoLocal);
         }
 
-        if (Versionador.isTeste()){
+        if (Versionador.isTeste()) {
 
             System.out.println("Adicionar Teste");
 
@@ -75,14 +76,14 @@ public class Escola {
     public static void fakes(ArrayList<Aluno> mAlunos) {
 
 
-        mAlunos.add(new Aluno("01", "7H", "COISINHA DE TAL", "SIM"));
-        mAlunos.add(new Aluno("02", "7H", "FULANO DE AQUI", "SIM"));
-        mAlunos.add(new Aluno("03", "7H", "BELTRANO DA ESQUINA", "SIM"));
-        mAlunos.add(new Aluno("04", "7H", "CICLANO EM VOZ", "SIM"));
-        mAlunos.add(new Aluno("05", "7H", "RENANO DALI", "SIM"));
+        mAlunos.add(new Aluno("01", "7H", "COISINHA DE TAL", "SIM","NAO"));
+        mAlunos.add(new Aluno("02", "7H", "FULANO DE AQUI", "SIM","NAO"));
+        mAlunos.add(new Aluno("03", "7H", "BELTRANO DA ESQUINA", "SIM","NAO"));
+        mAlunos.add(new Aluno("04", "7H", "CICLANO EM VOZ", "SIM","NAO"));
+        mAlunos.add(new Aluno("05", "7H", "RENANO DALI", "SIM","NAO"));
 
-        mAlunos.add(new Aluno("06", "7I", "AISSA DALI", "SIM"));
-        mAlunos.add(new Aluno("07", "7I", "MARCOS RICHO", "SIM"));
+        mAlunos.add(new Aluno("06", "7I", "AISSA DALI", "SIM","NAO"));
+        mAlunos.add(new Aluno("07", "7I", "MARCOS RICHO", "SIM","NAO"));
 
     }
 
@@ -110,9 +111,14 @@ public class Escola {
             if (aluno.getTurma().contentEquals(qual_turma)) {
 
                 String eVisibilidade = aluno.getVisibilidade();
+                String eAtestado = aluno.getAtestado();
+
+                if (eAtestado.length() == 0) {
+                    eAtestado = "NAO";
+                }
 
                 if (eVisibilidade.contentEquals("SIM")) {
-                    mAlunos.add(new AlunoComNota(aluno.getID(), aluno.getTurma(), aluno.getNome(), "", ""));
+                    mAlunos.add(new AlunoComNota(aluno.getID(), aluno.getTurma(), aluno.getNome(), "", eAtestado, ""));
                 }
             }
 

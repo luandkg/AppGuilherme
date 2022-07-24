@@ -13,12 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Guilherme">
         <activity
+            android:name=".activities.SobreActivity"
+            android:exported="false" />
+        <activity
             android:name=".TelaDeNavegacao"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Guilherme.NoActionBar" >
+            android:theme="@style/Theme.Guilherme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -43,10 +47,6 @@
         <activity
             android:name=".activities.AlunoRelatorioActivity"
             android:exported="false" />
-        <activity
-            android:name=".guardado.MainActivity"
-            android:exported="false">
-        </activity>
     </application>
 
 </manifest>

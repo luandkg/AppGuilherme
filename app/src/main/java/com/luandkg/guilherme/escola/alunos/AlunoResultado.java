@@ -53,7 +53,7 @@ public class AlunoResultado {
         return mNome;
     }
 
-    public void avaliar(String eData, String eArquivo, String eDataEntregue, boolean realizada) {
+    public void avaliar(String eData, String eArquivo, String eDataEntregue, boolean realizada,boolean mis_atestado) {
         mAtividades += 1;
         if (realizada) {
             mRealizadas += 1;
@@ -62,7 +62,7 @@ public class AlunoResultado {
 
 
 
-        mAtividadesLista.add(new AtividadeRealizada(eData, eArquivo, eDataEntregue, realizada));
+        mAtividadesLista.add(new AtividadeRealizada(eData, eArquivo, eDataEntregue, realizada,mis_atestado));
     }
 
     public ArrayList<AtividadeRealizada> getAtividadesRealizadas() {
@@ -99,8 +99,13 @@ public class AlunoResultado {
         double eNotaCompleta = (double) mRealizadas * tx;
 
         boolean temAtrasadas = false;
+
         int atrasadas_quantidade = 0;
+        int atrasadas_sem_atestado_quantidade = 0;
+int atrasadas_com_atestado_quantidade =0;
+
         String tem = "NAO";
+        String tem_atestado = "NAO";
 
         for (AtividadeRealizada aa : mAtividadesLista) {
             if (aa.getStatus()) {
@@ -108,6 +113,12 @@ public class AlunoResultado {
                     temAtrasadas = true;
                     atrasadas_quantidade += 1;
                     tem = "SIM";
+                    if (aa.temAtestado()){
+                        tem_atestado="SIM";
+                        atrasadas_com_atestado_quantidade+=1;
+                    }else{
+                        atrasadas_sem_atestado_quantidade+=1;
+                    }
                 }
             }
         }
@@ -119,7 +130,7 @@ public class AlunoResultado {
         }
 
 
-        double descontar_atrasadas = (double) atrasadas_quantidade * (tx / 4.0);
+        double descontar_atrasadas = (double) atrasadas_sem_atestado_quantidade * (tx / 4.0);
 
         mNotaFinalDouble = eNotaCompleta - descontar_atrasadas;
 
@@ -131,12 +142,15 @@ public class AlunoResultado {
         System.out.println("Aluno : " + mNome);
         System.out.println("\t - Nota : " + mNotaCompleta);
         System.out.println("\t - Tem atrasadas : " + tem);
+        System.out.println("\t - Com atestado : " + tem_atestado);
 
         if (temAtrasadas) {
 
             mNotaAtrasadas = Matematica.getNumeroRealPTBR(descontar_atrasadas);
 
-            System.out.println("\t - Atrasadas : " + atrasadas_quantidade);
+            System.out.println("\t - Atrasadas Todas : " + atrasadas_quantidade);
+            System.out.println("\t - Atrasadas Sem Atestado : " + atrasadas_sem_atestado_quantidade);
+            System.out.println("\t - Atrasadas Com Atestado : " + atrasadas_com_atestado_quantidade);
             System.out.println("\t - Descontar : " + mNotaAtrasadas);
             System.out.println("\t - Nova Nota : " + mNotaFinal);
 

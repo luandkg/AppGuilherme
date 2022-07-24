@@ -67,13 +67,18 @@ public class Perfilizar {
 
                         String nota = proc.identifique("Nota").getValor();
                         String data = proc.identifique("Data").getValor();
+                        String atestado = proc.identifique("Atestado").getValor();
 
+                        boolean teve_atestado = false;
+                        if(atestado.contentEquals("SIM")){
+                            teve_atestado=true;
+                        }
                         if (nota.contentEquals(ATIVIDADE_SIM)) {
                             atividade_realizada = true;
                             contagem += 1;
                         }
 
-                        perfil.avaliar(ATIVIDADE_DATA,ATIVIDADE_ARQUIVO,data, atividade_realizada);
+                        perfil.avaliar(ATIVIDADE_DATA,ATIVIDADE_ARQUIVO,data, atividade_realizada,teve_atestado);
 
                         break;
                     }

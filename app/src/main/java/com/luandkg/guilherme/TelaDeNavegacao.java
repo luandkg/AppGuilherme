@@ -1,7 +1,9 @@
 package com.luandkg.guilherme;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -14,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.luandkg.guilherme.R;
 import com.luandkg.guilherme.Versionador;
+import com.luandkg.guilherme.activities.SobreActivity;
 import com.luandkg.guilherme.databinding.ActivityTelaDeNavegacaoBinding;
 import com.luandkg.guilherme.escola.NotificadorDeSinalEscolar;
 import com.luandkg.guilherme.escola.Professor;
@@ -50,7 +53,7 @@ public class TelaDeNavegacao extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,R.id.nav_semanas,R.id.nav_desempenho)
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_semanas, R.id.nav_desempenho)
                 .setOpenableLayout(drawer)
                 .build();
 
@@ -87,5 +90,22 @@ public class TelaDeNavegacao extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_tela_de_navegacao);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration) || super.onSupportNavigateUp();
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_settings) {
+
+            Intent intent = new Intent(this.getBaseContext(), SobreActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            this.startActivity(intent);
+
+            return true;
+        }
+
+
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -7,9 +7,12 @@ import java.util.ArrayList;
 public class SemanaContinua {
 
     private ArrayList<Data> mDatas;
+
+    private int mNumero;
     private String mNome;
 
-    public SemanaContinua(String eNome, ArrayList<Data> eDatas) {
+    public SemanaContinua(int eNumero,String eNome, ArrayList<Data> eDatas) {
+        mNumero=eNumero;
         mNome = eNome;
         mDatas = eDatas;
     }

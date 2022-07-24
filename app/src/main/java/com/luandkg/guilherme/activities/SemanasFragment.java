@@ -20,8 +20,9 @@ import com.luandkg.guilherme.escola.alunos.AlunoResultado;
 import com.luandkg.guilherme.escola.metodo_avaliativo.AtividadeGraficos;
 import com.luandkg.guilherme.escola.metodo_avaliativo.AtividadesAnalisador;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
-import com.luandkg.guilherme.escola.tempo.ESTANCIA3_2BIMESTRE;
+import com.luandkg.guilherme.escola.tempo.ESTANCIA3_3BIMESTRE;
 import com.luandkg.guilherme.escola.Escola;
+import com.luandkg.guilherme.escola.tempo.ESTANCIA3_3BIMESTRE;
 import com.luandkg.guilherme.escola.tempo.SemanaContinua;
 import com.luandkg.guilherme.escola.tempo.SemanaContinuaCarregada;
 import com.luandkg.guilherme.listas.Itenizador;
@@ -41,7 +42,7 @@ public class SemanasFragment extends Fragment {
 
     private ArrayList<AlunoResultado> mAlunos;
     private ArrayList<Data> SEGUNDO_BIMESTRE;
-    private ArrayList<SemanaContinua> SEGUNDO_SEMANAS;
+    private ArrayList<SemanaContinua> LISTA_DE_SEMANAS;
     private ArrayList<SemanaContinuaCarregada> mSemanas;
 
     private FragmentSemanasBinding mInterface;
@@ -61,8 +62,8 @@ public class SemanasFragment extends Fragment {
         mAlunos = Escola.getAlunosComResultadoDaEscola();
 
 
-        SEGUNDO_BIMESTRE = ESTANCIA3_2BIMESTRE.getBimestre();
-        SEGUNDO_SEMANAS = ESTANCIA3_2BIMESTRE.getSemanas();
+        SEGUNDO_BIMESTRE = ESTANCIA3_3BIMESTRE.getBimestre();
+       LISTA_DE_SEMANAS = ESTANCIA3_3BIMESTRE.getSemanas();
 
         int atividades = 0;
 
@@ -80,7 +81,7 @@ public class SemanasFragment extends Fragment {
 
         int si = 0;
 
-        for (SemanaContinua semana : SEGUNDO_SEMANAS) {
+        for (SemanaContinua semana : LISTA_DE_SEMANAS) {
 
             int todos = mAlunos.size();
             int fizeram = AtividadesAnalisador.contar(semana.getDatas(), mAlunos);

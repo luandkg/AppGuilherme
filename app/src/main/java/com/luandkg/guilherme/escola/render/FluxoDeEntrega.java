@@ -10,6 +10,7 @@ import com.luandkg.guilherme.escola.metodo_avaliativo.AtividadeRealizada;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
 import com.luandkg.guilherme.escola.tempo.ContandoData;
 import com.luandkg.guilherme.escola.tempo.ESTANCIA3_2BIMESTRE;
+import com.luandkg.guilherme.escola.tempo.ESTANCIA3_3BIMESTRE;
 import com.luandkg.guilherme.escola.tempo.SemanaContinua;
 import com.luandkg.guilherme.libs.tempo.Data;
 
@@ -131,7 +132,7 @@ public class FluxoDeEntrega {
 
         int come = 5;
 
-        for (SemanaContinua eSemana : ESTANCIA3_2BIMESTRE.getSemanas()) {
+        for (SemanaContinua eSemana : ESTANCIA3_3BIMESTRE.getSemanas()) {
 
 
             int UM = 0;

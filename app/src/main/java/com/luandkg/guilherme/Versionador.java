@@ -7,8 +7,7 @@ public class Versionador extends Verkuz {
 
     public Versionador() {
 
-        setEstagio(Verkuz.TESTE);
-
+        setEstagio(Verkuz.RELEASE);
 
         setAutor("Launni Corporation");
         setModo(Verkuz.SIMPLES);
@@ -26,6 +25,11 @@ public class Versionador extends Verkuz {
     }
 
     public void init() {
+
+        DEV("2022_07_24", "Migrar para TERCEIRO BIMESTRE");
+        DEV("2022_07_24", "Nova Janela - SOBRE");
+        DEV("2022_07_24", "Fechar notas sem descontar atividades atrasadas com atestado");
+        DEV("2022_07_24", "Marcar atestado em atividades atrasadas");
 
         DEV("2022_07_15", "Sistema de Versionamento");
         DEV("2022_07_13", "Integração ao GIT HUB");

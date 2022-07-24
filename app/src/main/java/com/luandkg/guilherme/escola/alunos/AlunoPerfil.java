@@ -59,13 +59,13 @@ public class AlunoPerfil {
     }
 
 
-    public void avaliar(String eData, String eArquivo,String eDataEntregue,boolean realizada) {
+    public void avaliar(String eData, String eArquivo,String eDataEntregue,boolean realizada,boolean teve_atestado) {
         mAtividades += 1;
         if (realizada) {
             mRealizadas += 1;
         }
 
-        mAtividadesLista.add(new AtividadeRealizada(eData,eArquivo, eDataEntregue,realizada));
+        mAtividadesLista.add(new AtividadeRealizada(eData,eArquivo, eDataEntregue,realizada,teve_atestado));
     }
 
     public ArrayList<AtividadeRealizada> getAtividadesRealizadas() {

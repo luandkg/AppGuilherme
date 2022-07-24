@@ -165,4 +165,8 @@ public class Verkuz {
         return getVersaoCompleta() + " - " + getAutor();
     }
 
+    public String getData() {
+        return mBuilds.get(0).getData();
+    }
+
 }

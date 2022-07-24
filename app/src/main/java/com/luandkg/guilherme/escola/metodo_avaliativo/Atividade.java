@@ -133,6 +133,7 @@ public class Atividade {
                     //   System.out.println("obtendo nota de :: " + aluno.getNome() + " para :: " + proc.identifique("Nota").getValor());
 
                     aluno.setNota(proc.identifique("Nota").getValor());
+                    aluno.setAtestado(proc.identifique("Atestado").getValor());
                     aluno.setData(proc.identifique("Data").getValor());
 
                     System.out.println("\t - Lendo :: " + aluno.getNome() + " ->> " + aluno.getNota());
@@ -167,6 +168,7 @@ public class Atividade {
             aluno_objeto.identifique("ID", aluno.getID());
             aluno_objeto.identifique("Nome", aluno.getNome());
             aluno_objeto.identifique("Nota", aluno.getNota());
+            aluno_objeto.identifique("Atestado", aluno.getAtestado());
             aluno_objeto.identifique("Data", aluno.getData());
 
             if (aluno.getNota().contentEquals(ATIVIDADE_SIM)) {

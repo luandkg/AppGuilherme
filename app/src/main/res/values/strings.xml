@@ -6,7 +6,7 @@
     <string name="nav_header_title">Prof. Guilherme Gustavo</string>
     <string name="nav_header_subtitle">CED Estância III</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Configurações</string>
+    <string name="action_settings">Sobre</string>
 
     <string name="menu_home">Avaliação</string>
     <string name="menu_gallery">Horário</string>

@@ -47,11 +47,11 @@ public class BimestreFragment extends Fragment {
 
         SEDF_22 eSEDF_22 = new SEDF_22();
 
-        ArrayList<Data> datas = eSEDF_22.getSegundo();
+        ArrayList<Data> datas = eSEDF_22.getTerceiro();
         String hoje = Calendario.getADMComBarras();
 
 
-        if (eSEDF_22.getSegundo().size() > 0) {
+        if (eSEDF_22.getTerceiro().size() > 0) {
             TV_BIMESTRE_INICIO.setText(Calendario.filtrar_primeira(datas).getTempoLegivel());
             TV_BIMESTRE_FIM.setText(Calendario.filtrar_ultima(datas).getTempoLegivel());
         }
