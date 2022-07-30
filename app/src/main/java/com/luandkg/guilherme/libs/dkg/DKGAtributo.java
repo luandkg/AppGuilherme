@@ -115,4 +115,8 @@ public class DKGAtributo {
         return valorPadrao;
     }
 
+
+    public boolean isValor(String eValor){
+        return getValor().contentEquals(eValor);
+    }
 }

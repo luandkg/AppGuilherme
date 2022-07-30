@@ -1,4 +1,4 @@
-package com.luandkg.guilherme.activities;
+package com.luandkg.guilherme.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -17,7 +17,7 @@ import com.luandkg.guilherme.escola.alunos.Aluno;
 import com.luandkg.guilherme.escola.render.FluxoDeEntrega;
 import com.luandkg.guilherme.escola.tempo.BimestreTemporal;
 import com.luandkg.guilherme.escola.Escola;
-import com.luandkg.guilherme.escola.tempo.SEDF_22;
+import com.luandkg.guilherme.escola.gg.SEDF_22;
 import com.luandkg.guilherme.professores.Professores;
 import com.luandkg.guilherme.libs.tempo.Calendario;
 import com.luandkg.guilherme.libs.tempo.Data;

@@ -4,14 +4,22 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_horario"
+            android:icon="@drawable/ic_horario"
+            android:title="@string/menu_gallery" />
+
+        <item
+            android:id="@+id/nav_buscar_aluno"
+            android:icon="@drawable/ic_chamada"
+            android:title="@string/menu_buscar" />
+
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_grass"
             android:title="@string/menu_home" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_horario"
-            android:title="@string/menu_gallery" />
+
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_relatorio"
@@ -24,5 +32,10 @@
             android:id="@+id/nav_desempenho"
             android:icon="@drawable/ic_avaliacao"
             android:title="@string/menu_desempenho" />
+        <item
+            android:id="@+id/nav_anotador"
+            android:icon="@drawable/ic_anotacoes"
+            android:title="Anotações" />
+
     </group>
 </menu>

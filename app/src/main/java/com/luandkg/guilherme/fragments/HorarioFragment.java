@@ -1,4 +1,4 @@
-package com.luandkg.guilherme.activities;
+package com.luandkg.guilherme.fragments;
 
 import android.graphics.Color;
 import android.os.Bundle;

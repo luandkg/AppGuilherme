@@ -7,24 +7,34 @@ public class Versionador extends Verkuz {
 
     public Versionador() {
 
-        setEstagio(Verkuz.RELEASE);
+        setEstagio(Verkuz.TESTE);
 
         setAutor("Launni Corporation");
         setModo(Verkuz.SIMPLES);
 
     }
 
-    public static boolean isTeste() {
-        Versionador eVersionador = new Versionador();
-        return eVersionador.getEstagio() == Verkuz.TESTE;
-    }
-
-    public static boolean isRelease() {
-        Versionador eVersionador = new Versionador();
-        return eVersionador.getEstagio() == Verkuz.RELEASE;
-    }
 
     public void init() {
+
+        DEV("2022_07_30", "Lançamento de atestados");
+        DEV("2022_07_30", "Selecionador de aluno");
+        DEV("2022_07_30", "Selecionador de data");
+
+
+        DEV("2022_07_26", "Sistema de anotações - Remover todos os arquivados");
+        DEV("2022_07_26", "Sistema de anotações - Arquivar / Desarquivar");
+        DEV("2022_07_26", "Sistema de anotações - Editar anotação");
+        DEV("2022_07_26", "Sistema de anotações - Listar anotação");
+        DEV("2022_07_26", "Sistema de anotações - Remover anotação");
+        DEV("2022_07_26", "Sistema de anotações - Criar anotação");
+        DEV("2022_07_26", "Construção do Sistema de anotações");
+
+
+        DEV("2022_07_25", "Exportar atividades de cada aluno e notas atribuida a turma");
+        DEV("2022_07_25", "Correção do metodo de gerar notas de todos os alunos");
+        DEV("2022_07_25", "Exportar notas dos alunos em arquivo !");
+        DEV("2022_07_25", "Buscar alunos de forma rapida");
 
         DEV("2022_07_24", "Migrar para TERCEIRO BIMESTRE");
         DEV("2022_07_24", "Nova Janela - SOBRE");

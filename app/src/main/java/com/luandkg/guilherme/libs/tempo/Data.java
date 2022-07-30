@@ -14,6 +14,26 @@ public class Data {
         mDiaSemanal = eDiaSemanal;
     }
 
+    public Data(int eAno, int eMes, int eDia) {
+        mAno = eAno;
+        mMes = eMes;
+        mDia = eDia;
+        mDiaSemanal = DiaSemanal.Domingo;
+    }
+
+
+    public void set(int eAno, int eMes, int eDia) {
+        mAno = eAno;
+        mMes = eMes;
+        mDia = eDia;
+    }
+
+    public void set(String eData) {
+        mAno = Data.toData(eData).getAno();
+        mMes = Data.toData(eData).getMes();
+        mDia = Data.toData(eData).getDia();
+    }
+
     public DiaSemanal getDiaSemanal() {
         return mDiaSemanal;
     }
@@ -107,10 +127,9 @@ public class Data {
         return sDia + "/" + sMes + "/" + mAno;
     }
 
-    public boolean isIgual(String sData){
+    public boolean isIgual(String sData) {
         return getFluxo().contentEquals(sData);
     }
-
 
 
     public String getTitulo() {
@@ -201,7 +220,7 @@ public class Data {
 
             ret = new Data(Integer.parseInt(ano), Integer.parseInt(mes), Integer.parseInt(dia), DiaSemanal.Domingo);
 
-        }else       if (data.length() == 10 && data.contains("/")) {
+        } else if (data.length() == 10 && data.contains("/")) {
 
             String dia = String.valueOf(data.charAt(0)) + String.valueOf(data.charAt(1));
             String mes = String.valueOf(data.charAt(3)) + String.valueOf(data.charAt(4));

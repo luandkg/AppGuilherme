@@ -1,4 +1,4 @@
-package com.luandkg.guilherme.activities;
+package com.luandkg.guilherme.fragments;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -11,10 +11,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.luandkg.guilherme.databinding.FragmentDesempenhoBinding;
 import com.luandkg.guilherme.databinding.FragmentSlideshowBinding;
+import com.luandkg.guilherme.escola.CalcularNotas;
+import com.luandkg.guilherme.escola.Exportacao;
 import com.luandkg.guilherme.escola.alunos.AlunoResultado;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
 import com.luandkg.guilherme.escola.metodo_avaliativo.CoresDeAvaliacao;
@@ -28,6 +31,7 @@ public class DesempenhoFragment extends Fragment {
 
     private FragmentDesempenhoBinding binding;
     private ArrayList<AlunoResultado> mAlunos;
+    private Button mExportar;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,33 +41,20 @@ public class DesempenhoFragment extends Fragment {
         View root = binding.getRoot();
 
         ImageView IV_DESEMPENHO = binding.desempenhoGrafico;
+        mExportar = binding.desempenhoExportar;
 
 
-        ArrayList<String> turmas = new ArrayList<String>();
+        mAlunos = CalcularNotas.calcular();
 
-        turmas.add("7H");
-        turmas.add("7I");
-        turmas.add("7J");
-        turmas.add("7K");
-        turmas.add("7L");
-        turmas.add("7M");
-        turmas.add("7N");
-
-        turmas.add("PD7H");
-        turmas.add("PD7I");
-
-        mAlunos = Escola.getAlunosComResultadoDaEscola();
-
-        for (String turma : turmas) {
-
-            String AVALIADOR_VALOR_STRING = Strings.seVazioEntao(Avaliador.getAvaliacao(turma), "1,0");
-            double AVALIADOR_VALOR = Double.parseDouble(AVALIADOR_VALOR_STRING.replace(",", "."));
-
-            Avaliador.avaliar_resultado(turma, AVALIADOR_VALOR, mAlunos);
-
-        }
 
         IV_DESEMPENHO.setImageBitmap(onResultadoFinal_Pre(mAlunos));
+
+        mExportar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Exportacao.exportar("notas.dkg");
+            }
+        });
 
 
         return root;
@@ -113,11 +104,11 @@ public class DesempenhoFragment extends Fragment {
 
             int total = pre_quantosDesse(alunos_continuos, a);
 
-           // total = 5;
+            // total = 5;
 
             double prop = (double) total / (double) alunos_continuos.size();
 
-            int real = (int) (prop * 100.0F)*2;
+            int real = (int) (prop * 100.0F) * 2;
 
             //real = 40;
 
@@ -167,7 +158,7 @@ public class DesempenhoFragment extends Fragment {
 
         for (AlunoResultado v : alunos_continuos) {
 
-            double nota =v.getNotaFinalDouble();
+            double nota = v.getNotaFinalDouble();
 
             if (nota >= valor && (nota < (valor + 1.0))) {
                 f += 1;

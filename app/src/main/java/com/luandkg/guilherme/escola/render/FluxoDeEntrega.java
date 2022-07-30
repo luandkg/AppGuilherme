@@ -9,8 +9,7 @@ import com.luandkg.guilherme.escola.alunos.Aluno;
 import com.luandkg.guilherme.escola.metodo_avaliativo.AtividadeRealizada;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
 import com.luandkg.guilherme.escola.tempo.ContandoData;
-import com.luandkg.guilherme.escola.tempo.ESTANCIA3_2BIMESTRE;
-import com.luandkg.guilherme.escola.tempo.ESTANCIA3_3BIMESTRE;
+import com.luandkg.guilherme.escola.gg.ESTANCIA3_3BIMESTRE;
 import com.luandkg.guilherme.escola.tempo.SemanaContinua;
 import com.luandkg.guilherme.libs.tempo.Data;
 
@@ -18,9 +17,9 @@ import java.util.ArrayList;
 
 public class FluxoDeEntrega {
 
-    public static Bitmap criarFluxoDeEntrega(ArrayList<Aluno> alunos, ArrayList<Data> quais_datas ) {
+    public static Bitmap criarFluxoDeEntrega(ArrayList<Aluno> alunos, ArrayList<Data> quais_datas) {
 
-        ArrayList<ContandoData> contadores = Avaliador.getFluxoDeEntrega(alunos,quais_datas);
+        ArrayList<ContandoData> contadores = Avaliador.getFluxoDeEntrega(alunos, quais_datas);
 
 
         int w = 350;
@@ -98,15 +97,28 @@ public class FluxoDeEntrega {
 
         for (Data data : quais_datas) {
 
-            for (AtividadeRealizada eSemanaContinuaValores : mAtividades) {
+            for (AtividadeRealizada eAtividade : mAtividades) {
 
-              //  System.out.println(eSemanaContinuaValores.getData() + " :: " + data.getTempo());
 
-                if (data.getTempo().contentEquals(eSemanaContinuaValores.getData())) {
+                String s_data = data.getTempo();
+                String a_data = eAtividade.getData();
 
-                    if (eSemanaContinuaValores.getStatus()) {
+
+               // System.out.println(a_data + " :: " + s_data);
+
+
+                if (s_data.contentEquals(a_data)) {
+
+                    if (eAtividade.getStatus()) {
                         int coluna_altura = 200;
-                        canvas.drawRect(eixo_x, h - coluna_altura, eixo_x + coluna_largura_pintar, h, pintor_verde);
+
+                        if (eAtividade.isAtrasada()) {
+                            canvas.drawRect(eixo_x, h - coluna_altura, eixo_x + coluna_largura_pintar, h, pintor_amarelo);
+                        } else {
+                            canvas.drawRect(eixo_x, h - coluna_altura, eixo_x + coluna_largura_pintar, h, pintor_verde);
+                        }
+
+
                     }
 
                 }
@@ -127,7 +139,7 @@ public class FluxoDeEntrega {
 
         int larg = quais_datas.size() * coluna_largura;
 
-        int coluna_largura2 = larg / ESTANCIA3_2BIMESTRE.getSemanas().size();
+        int coluna_largura2 = larg / ESTANCIA3_3BIMESTRE.getSemanas().size();
         int coluna_largura_pintar2 = coluna_largura2 - 5;
 
         int come = 5;
@@ -141,10 +153,14 @@ public class FluxoDeEntrega {
 
             for (Data data : eSemana.getDatas()) {
 
-                for (AtividadeRealizada eSemanaContinuaValores : mAtividades) {
+                for (AtividadeRealizada eAtividade : mAtividades) {
 
-                    if (data.getTempo().contentEquals(eSemanaContinuaValores.getData())) {
-                        if (eSemanaContinuaValores.getStatus()) {
+                    String s_data = data.getTempo();
+                    String a_data = eAtividade.getData();
+
+
+                    if (s_data.contentEquals(a_data)) {
+                        if (eAtividade.getStatus()) {
                             UM += 1;
                         }
                     }

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activities.LancarAtestadoActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="LANÇAR ATESTADO"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/LANCAR_ATESTADO_BUSCAR_ALUNO_TIL"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Aluno">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/LANCAR_ATESTADO_BUSCAR_ALUNO_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/LANCAR_ATESTADO_BUSCAR_ALUNO_BUSCAR"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Buscar"
+        android:textSize="20dp" />
+
+    <ListView
+        android:id="@+id/LANCAR_ATESTADO_BUSCAR_ALUNO_LISTAGEM"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="5dp"
+        android:orientation="vertical" />
+
+    <Button
+        android:id="@+id/Anotacao_lancar_atestado"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Selecionar Data"
+        android:layout_gravity="center_horizontal"
+        android:hint="Data"></Button>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/Anotacao_lancar_atestado_cancelar"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="#E53935"
+            android:text="CANCELAR"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/Anotacao_lancar_atestado_ok"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="#4CAF50"
+            android:text="LANÇAR"
+            android:textSize="20dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

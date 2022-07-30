@@ -4,6 +4,7 @@ import com.luandkg.guilherme.TesteAlteradorDeData;
 import com.luandkg.guilherme.Versionador;
 import com.luandkg.guilherme.escola.metodo_avaliativo.AtividadeRealizada;
 import com.luandkg.guilherme.libs.tempo.Data;
+import com.luandkg.guilherme.libs.verkuz.Verkuz;
 import com.luandkg.guilherme.utils.Matematica;
 
 import java.util.ArrayList;
@@ -53,16 +54,14 @@ public class AlunoResultado {
         return mNome;
     }
 
-    public void avaliar(String eData, String eArquivo, String eDataEntregue, boolean realizada,boolean mis_atestado) {
+    public void avaliar(String eData, String eArquivo, String eDataEntregue, boolean realizada, boolean mis_atestado) {
         mAtividades += 1;
         if (realizada) {
             mRealizadas += 1;
         }
 
 
-
-
-        mAtividadesLista.add(new AtividadeRealizada(eData, eArquivo, eDataEntregue, realizada,mis_atestado));
+        mAtividadesLista.add(new AtividadeRealizada(eData, eArquivo, eDataEntregue, realizada, mis_atestado));
     }
 
     public ArrayList<AtividadeRealizada> getAtividadesRealizadas() {
@@ -102,7 +101,7 @@ public class AlunoResultado {
 
         int atrasadas_quantidade = 0;
         int atrasadas_sem_atestado_quantidade = 0;
-int atrasadas_com_atestado_quantidade =0;
+        int atrasadas_com_atestado_quantidade = 0;
 
         String tem = "NAO";
         String tem_atestado = "NAO";
@@ -113,26 +112,30 @@ int atrasadas_com_atestado_quantidade =0;
                     temAtrasadas = true;
                     atrasadas_quantidade += 1;
                     tem = "SIM";
-                    if (aa.temAtestado()){
-                        tem_atestado="SIM";
-                        atrasadas_com_atestado_quantidade+=1;
-                    }else{
-                        atrasadas_sem_atestado_quantidade+=1;
+                    if (aa.temAtestado()) {
+                        tem_atestado = "SIM";
+                        atrasadas_com_atestado_quantidade += 1;
+                    } else {
+                        atrasadas_sem_atestado_quantidade += 1;
                     }
                 }
             }
         }
 
-        if (Versionador.isTeste()){
-            if (mNome.contentEquals("RENANO DALI")){
-                atrasadas_quantidade=0;
+        if (Verkuz.isTeste(new Versionador())) {
+            if (mNome.contentEquals("RENANO DALI")) {
+                atrasadas_quantidade = 0;
             }
         }
 
 
         double descontar_atrasadas = (double) atrasadas_sem_atestado_quantidade * (tx / 4.0);
 
-        mNotaFinalDouble = eNotaCompleta - descontar_atrasadas;
+        if (eNotaCompleta > 0.0) {
+            mNotaFinalDouble = eNotaCompleta - descontar_atrasadas;
+        } else {
+            mNotaFinalDouble = 0.0;
+        }
 
 
         mNotaCompleta = Matematica.getNumeroRealPTBR(eNotaCompleta);
@@ -140,6 +143,7 @@ int atrasadas_com_atestado_quantidade =0;
 
 
         System.out.println("Aluno : " + mNome);
+        System.out.println("\t - Atividades : " + mAtividadesLista.size());
         System.out.println("\t - Nota : " + mNotaCompleta);
         System.out.println("\t - Tem atrasadas : " + tem);
         System.out.println("\t - Com atestado : " + tem_atestado);
@@ -158,6 +162,58 @@ int atrasadas_com_atestado_quantidade =0;
         }
 
     }
+
+
+    public ArrayList<AtividadeRealizada> getAtividadesAtrasadas() {
+
+        ArrayList<AtividadeRealizada> ret = new ArrayList<AtividadeRealizada>();
+
+        for (AtividadeRealizada aa : mAtividadesLista) {
+            if (aa.getStatus()) {
+                if (aa.isAtrasada()) {
+                    ret.add(aa);
+                }
+            }
+        }
+
+        return ret;
+    }
+
+    public ArrayList<AtividadeRealizada> getAtividadesAtrasadasComAtestado() {
+
+        ArrayList<AtividadeRealizada> ret = new ArrayList<AtividadeRealizada>();
+
+        for (AtividadeRealizada aa : mAtividadesLista) {
+            if (aa.getStatus()) {
+                if (aa.isAtrasada()) {
+                    if (aa.temAtestado()) {
+                        ret.add(aa);
+                    }
+                }
+            }
+        }
+
+        return ret;
+    }
+
+
+    public ArrayList<AtividadeRealizada> getAtividadesAtrasadasSemAtestado() {
+
+        ArrayList<AtividadeRealizada> ret = new ArrayList<AtividadeRealizada>();
+
+        for (AtividadeRealizada aa : mAtividadesLista) {
+            if (aa.getStatus()) {
+                if (aa.isAtrasada()) {
+                    if (!aa.temAtestado()) {
+                        ret.add(aa);
+                    }
+                }
+            }
+        }
+
+        return ret;
+    }
+
 
     public String getNotaCompleta() {
         return mNotaCompleta;

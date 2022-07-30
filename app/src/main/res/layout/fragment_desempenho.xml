@@ -3,21 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center_vertical"
-    tools:context=".activities.DesempenhoFragment">
+    android:orientation="vertical"
+    tools:context=".fragments.DesempenhoFragment">
 
     <TextView
-        android:textSize="25dp"
-        android:textAlignment="center"
-        android:text="DESEMPENHO"
         android:layout_width="match_parent"
-        android:layout_height="40dp"/>
+        android:layout_height="40dp"
+        android:text="DESEMPENHO"
+        android:textAlignment="center"
+        android:textSize="25dp" />
 
     <ImageView
         android:id="@+id/desempenho_grafico"
-        android:layout_gravity="center"
-        android:layout_margin="5dp"
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp" />
+
+    <Button
+        android:id="@+id/desempenho_exportar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#8bc34a"
+        android:text="EXPORTAR"
+        android:textSize="20dp" />
 </LinearLayout>

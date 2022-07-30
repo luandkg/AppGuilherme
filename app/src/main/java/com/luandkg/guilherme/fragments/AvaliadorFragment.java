@@ -1,4 +1,4 @@
-package com.luandkg.guilherme.activities;
+package com.luandkg.guilherme.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,8 @@ import androidx.fragment.app.Fragment;
 
 import com.luandkg.guilherme.Local;
 import com.luandkg.guilherme.Versionador;
+import com.luandkg.guilherme.activities.AtividadesActivity;
+import com.luandkg.guilherme.activities.FluxoActivity;
 import com.luandkg.guilherme.databinding.FragmentHomeBinding;
 
 public class AvaliadorFragment extends Fragment {

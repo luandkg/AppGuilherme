@@ -1,9 +1,12 @@
 package com.luandkg.guilherme.escola.metodo_avaliativo;
 
 import com.luandkg.guilherme.Local;
+import com.luandkg.guilherme.TesteAlteradorDeData;
+import com.luandkg.guilherme.Versionador;
 import com.luandkg.guilherme.libs.dkg.DKG;
 import com.luandkg.guilherme.libs.dkg.DKGObjeto;
 import com.luandkg.guilherme.escola.alunos.AlunoComNota;
+import com.luandkg.guilherme.libs.verkuz.Verkuz;
 import com.luandkg.guilherme.utils.FS;
 
 import java.util.ArrayList;
@@ -42,6 +45,10 @@ public class Atividade {
         mTurma = atividade_cabecalho.identifique("Turma").getValor();
 
         mTempo = atividade_cabecalho.identifique("Tempo").getValor();
+
+        if (Verkuz.isTeste(new Versionador())) {
+            mTempo = TesteAlteradorDeData.alterar(mTempo);
+        }
 
         mFizeram = atividade_cabecalho.identifique("Fizeram").getInteiro(0);
         mTotal = atividade_cabecalho.identifique("Total").getInteiro(0);

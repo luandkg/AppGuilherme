@@ -8,6 +8,7 @@ import com.luandkg.guilherme.escola.alunos.Aluno;
 import com.luandkg.guilherme.escola.alunos.AlunoAtividade;
 import com.luandkg.guilherme.escola.alunos.AlunoComNota;
 import com.luandkg.guilherme.escola.alunos.AlunoResultado;
+import com.luandkg.guilherme.libs.verkuz.Verkuz;
 import com.luandkg.guilherme.utils.FS;
 
 import java.io.File;
@@ -53,7 +54,7 @@ public class Escola {
                     eVisibilidade = "SIM";
                 }
 
-                mAlunos.add(new Aluno(eID, eTurma, eNome, eVisibilidade,eAtestado));
+                mAlunos.add(new Aluno(eID, eTurma, eNome, eVisibilidade, eAtestado));
 
             }
 
@@ -62,7 +63,7 @@ public class Escola {
             eDocumento.salvar(eArquivoLocal);
         }
 
-        if (Versionador.isTeste()) {
+        if (Verkuz.isTeste(new Versionador())) {
 
             System.out.println("Adicionar Teste");
 
@@ -76,14 +77,16 @@ public class Escola {
     public static void fakes(ArrayList<Aluno> mAlunos) {
 
 
-        mAlunos.add(new Aluno("01", "7H", "COISINHA DE TAL", "SIM","NAO"));
-        mAlunos.add(new Aluno("02", "7H", "FULANO DE AQUI", "SIM","NAO"));
-        mAlunos.add(new Aluno("03", "7H", "BELTRANO DA ESQUINA", "SIM","NAO"));
-        mAlunos.add(new Aluno("04", "7H", "CICLANO EM VOZ", "SIM","NAO"));
-        mAlunos.add(new Aluno("05", "7H", "RENANO DALI", "SIM","NAO"));
+        mAlunos.add(new Aluno("01", "7H", "EDUARDO FAZZ DE TAL", "SIM", "NAO"));
+        mAlunos.add(new Aluno("02", "7H", "FULANO DE AQUI", "SIM", "NAO"));
+        mAlunos.add(new Aluno("03", "7H", "BELTRANO DA ESQUINA", "SIM", "NAO"));
+        mAlunos.add(new Aluno("04", "7H", "CICLANO EM VOZ", "SIM", "NAO"));
+        mAlunos.add(new Aluno("05", "7H", "VOLANO NOCCOS", "SIM", "NAO"));
 
-        mAlunos.add(new Aluno("06", "7I", "AISSA DALI", "SIM","NAO"));
-        mAlunos.add(new Aluno("07", "7I", "MARCOS RICHO", "SIM","NAO"));
+        mAlunos.add(new Aluno("06", "7I", "AISSA MATTOS", "SIM", "NAO"));
+        mAlunos.add(new Aluno("07", "7I", "LARISSA RICHO", "SIM", "NAO"));
+        mAlunos.add(new Aluno("08", "7I", "AGATA ALENCAR", "SIM", "NAO"));
+        mAlunos.add(new Aluno("09", "7H", "ANA FLAVIA", "SIM", "NAO"));
 
     }
 

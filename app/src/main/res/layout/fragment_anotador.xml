@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.AnotadorFragment">
+
+    <ListView
+        android:id="@+id/anotador_listagem"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_margin="5dp"
+        android:orientation="vertical" />
+
+    <Button
+        android:id="@+id/anotador_criar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="2dp"
+        android:text="Criar Anotação" />
+
+    <Button
+        android:id="@+id/anotador_lancar_atestado"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="2dp"
+        android:backgroundTint="#f44336"
+        android:text="Lançar Atestado" />
+
+    <Button
+        android:id="@+id/anotador_arquivadas"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="2dp"
+        android:backgroundTint="#ffc107"
+        android:text="Arquivadas" />
+
+</LinearLayout>

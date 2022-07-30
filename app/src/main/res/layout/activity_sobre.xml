@@ -51,5 +51,10 @@
         android:textAlignment="center"
         android:textSize="13dp" />
 
+    <ListView
+        android:id="@+id/sobre_listagem"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
 
 </LinearLayout>

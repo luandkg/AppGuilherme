@@ -21,6 +21,8 @@ public class AlunoPerfil {
 
     private ArrayList<AtividadeRealizada> mAtividadesLista;
 
+    private boolean mIsMarcado ;
+
     public AlunoPerfil() {
         mID = "";
         mNome = "";
@@ -34,6 +36,8 @@ public class AlunoPerfil {
         mNotaFinalDouble=0.0;
 
         mAtividadesLista = new ArrayList<AtividadeRealizada>();
+
+        mIsMarcado=false;
     }
 
     public void set(String id, String eNome,String eTurma) {
@@ -118,4 +122,13 @@ public class AlunoPerfil {
         return v;
     }
 
+    public boolean isMarcado(){return mIsMarcado;}
+
+    public void marcar(){
+        mIsMarcado=true;
+    }
+
+    public void desmarcar(){
+        mIsMarcado=false;
+    }
 }

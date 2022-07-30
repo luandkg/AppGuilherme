@@ -17,8 +17,7 @@ import com.luandkg.guilherme.escola.alunos.Aluno;
 import com.luandkg.guilherme.escola.alunos.AlunoAtividade;
 import com.luandkg.guilherme.escola.metodo_avaliativo.AtividadeGraficos;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
-import com.luandkg.guilherme.escola.tempo.ESTANCIA3_2BIMESTRE;
-import com.luandkg.guilherme.escola.tempo.ESTANCIA3_3BIMESTRE;
+import com.luandkg.guilherme.escola.gg.ESTANCIA3_3BIMESTRE;
 import com.luandkg.guilherme.escola.Escola;
 import com.luandkg.guilherme.escola.tempo.SemanaContinua;
 import com.luandkg.guilherme.escola.utils.PaletaDeCores;
@@ -57,8 +56,8 @@ public class MomentoDeAvaliacao extends AppCompatActivity {
 
         mTitulo.setText(mSemana);
 
-        ArrayList<SemanaContinua> LISTA_DE_SEMANAS = ESTANCIA3_2BIMESTRE.getSemanas();
-        ArrayList<Data> TERCEIRO_BIMESTRE = ESTANCIA3_2BIMESTRE.getBimestre();
+        ArrayList<SemanaContinua> LISTA_DE_SEMANAS = ESTANCIA3_3BIMESTRE.getSemanas();
+        ArrayList<Data> TERCEIRO_BIMESTRE = ESTANCIA3_3BIMESTRE.getBimestre();
 
         ArrayList<Aluno> mAlunos = Escola.getAlunosVisiveis();
 

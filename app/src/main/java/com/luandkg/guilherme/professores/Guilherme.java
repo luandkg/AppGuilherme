@@ -1,6 +1,6 @@
 package com.luandkg.guilherme.professores;
 
-import com.luandkg.guilherme.escola.tempo.SEDF_22;
+import com.luandkg.guilherme.escola.gg.SEDF_22;
 import com.luandkg.guilherme.escola.coisas.AtividadeEspecial;
 import com.luandkg.guilherme.escola.Professor;
 import com.luandkg.guilherme.escola.coisas.TurmaItem;

@@ -9,6 +9,7 @@ import com.luandkg.guilherme.escola.alunos.Aluno;
 import com.luandkg.guilherme.escola.alunos.AlunoAtividade;
 import com.luandkg.guilherme.escola.alunos.AlunoResultado;
 import com.luandkg.guilherme.escola.tempo.ContandoData;
+import com.luandkg.guilherme.libs.verkuz.Verkuz;
 import com.luandkg.guilherme.utils.FS;
 import com.luandkg.guilherme.libs.tempo.Calendario;
 import com.luandkg.guilherme.libs.tempo.Data;
@@ -187,8 +188,9 @@ public class Avaliador {
                                 teve_atestado=true;
                             }
 
-                            if (Versionador.isTeste()) {
+                            if (Verkuz.isTeste(new Versionador())) {
                                 data = TesteAlteradorDeData.alterar(data);
+                                ATIVIDADE_DATA = TesteAlteradorDeData.alterar(ATIVIDADE_DATA);
                             }
 
 
@@ -399,7 +401,7 @@ public class Avaliador {
                         String nota = proc.identifique("Nota").getValor();
                         String data = proc.identifique("Data").getValor();
 
-                        if (Versionador.isTeste()) {
+                        if (Verkuz.isTeste(new Versionador())) {
                             data = TesteAlteradorDeData.alterar(data);
 
                             System.out.println("ENCONTREI :: " + aluno.getID() + " :: " + data);
@@ -426,7 +428,7 @@ public class Avaliador {
 
         }
 
-        if (Versionador.isTeste()) {
+        if (Verkuz.isTeste(new Versionador())) {
             for (ContandoData contador : contadores) {
                 System.out.println("MOSTRANDO CONTADOR :: " + contador.getData() + " -->> " + contador.getValor());
             }

@@ -1,4 +1,4 @@
-package com.luandkg.guilherme.escola.tempo;
+package com.luandkg.guilherme.escola.gg;
 
 import com.luandkg.guilherme.libs.tempo.Calendario;
 import com.luandkg.guilherme.libs.tempo.Data;

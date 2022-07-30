@@ -4,29 +4,41 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2345" />
+        <entry key="app/src/main/res/drawable/ic_chamada.xml" value="0.212" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2345" />
         <entry key="app/src/main/res/drawable/ic_menu_camera.xml" value="0.242" />
         <entry key="app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.242" />
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.242" />
         <entry key="app/src/main/res/layout/activity_aluno_relatorio.xml" value="0.423712342079689" />
+        <entry key="app/src/main/res/layout/activity_anotacao_criar.xml" value="0.5060240963855421" />
+        <entry key="app/src/main/res/layout/activity_anotacao_editar.xml" value="0.365234375" />
+        <entry key="app/src/main/res/layout/activity_anotacoes_arquivadas.xml" value="0.3080568720379147" />
         <entry key="app/src/main/res/layout/activity_atividades.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_avaliacao.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_dlg_atividade_renomear.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_fluxo.xml" value="0.4040778498609824" />
+        <entry key="app/src/main/res/layout/activity_lancar_atestado.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_momento_de_avaliacao.xml" value="0.35833333333333334" />
         <entry key="app/src/main/res/layout/activity_quadro_de_notas.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_sobre.xml" value="0.3476923076923077" />
         <entry key="app/src/main/res/layout/activity_tela_de_navegacao.xml" value="0.3585200625325691" />
+        <entry key="app/src/main/res/layout/fragment_anotador.xml" value="0.4120634920634921" />
+        <entry key="app/src/main/res/layout/fragment_buscar_aluno.xml" value="0.27045336112558627" />
         <entry key="app/src/main/res/layout/fragment_desempenho.xml" value="0.3585200625325691" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.28854166666666664" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.28854166666666664" />
+        <entry key="app/src/main/res/layout/fragment_horario.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_semanas.xml" value="0.34340802501302764" />
         <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.43201542912246865" />
         <entry key="app/src/main/res/layout/item_aluno_nota_final.xml" value="0.334375" />
+        <entry key="app/src/main/res/layout/item_anotacao.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_atividade.xml" value="0.3528205128205128" />
+        <entry key="app/src/main/res/layout/item_atualizacao.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/item_avaliacao.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_commit.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/layout/item_momento_avaliativo.xml" value="0.6646341463414634" />
+        <entry key="app/src/main/res/menu/tela_de_navegacao.xml" value="0.30092592592592593" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.227" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.227" />
       </map>

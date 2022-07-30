@@ -13,6 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Guilherme">
         <activity
+            android:name=".activities.LancarAtestadoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AnotacoesArquivadasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AnotacaoEditarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AnotacaoCriarActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.SobreActivity"
             android:exported="false" />
         <activity

@@ -1,6 +1,7 @@
-package com.luandkg.guilherme.escola.tempo;
+package com.luandkg.guilherme.escola.gg;
 
 
+import com.luandkg.guilherme.escola.tempo.SemanaContinua;
 import com.luandkg.guilherme.libs.tempo.Calendario;
 import com.luandkg.guilherme.libs.tempo.Data;
 import com.luandkg.guilherme.libs.tempo.DiaSemanal;

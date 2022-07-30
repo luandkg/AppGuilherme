@@ -425,5 +425,15 @@ public class Calendario {
         return mDatas.get(mDatas.size() - 1);
     }
 
+    public static String formate_dia_mes(String faixa) {
+
+        String dia = String.valueOf(faixa.charAt(8)) + String.valueOf(faixa.charAt(9));
+        String mes = String.valueOf(faixa.charAt(5)) + String.valueOf(faixa.charAt(6));
+
+        String sMes = Calendario.getMesPrefixo(mes);
+
+        return dia + " de " + sMes;
+
+    }
 
 }

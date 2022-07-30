@@ -185,4 +185,9 @@ public class DKGObjeto {
     }
 
 
+    public String id_string(String eNome){
+        return identifique(eNome).getValor();
+    }
+
+
 }

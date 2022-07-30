@@ -1,5 +1,7 @@
 package com.luandkg.guilherme.libs.verkuz;
 
+import com.luandkg.guilherme.Versionador;
+
 import java.util.ArrayList;
 
 public class Verkuz {
@@ -17,6 +19,16 @@ public class Verkuz {
 
     public static final int RELEASE = 1;
     public static final int TESTE = -1;
+
+
+    public static boolean isTeste(Verkuz eVerkuz) {
+        return eVerkuz.getEstagio() == Verkuz.TESTE;
+    }
+
+    public static boolean isRelease(Verkuz eVerkuz) {
+        return eVerkuz.getEstagio() == Verkuz.RELEASE;
+    }
+
 
     public Verkuz() {
         mAutor = "";
@@ -139,6 +151,9 @@ public class Verkuz {
         return mBuilds.size();
     }
 
+    public ArrayList<Commit> getCommits() {
+        return mBuilds;
+    }
 
     public String getUltima() {
         String ret = "";
@@ -168,5 +183,6 @@ public class Verkuz {
     public String getData() {
         return mBuilds.get(0).getData();
     }
+
 
 }

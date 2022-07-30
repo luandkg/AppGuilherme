@@ -13,4 +13,7 @@ public class Commit {
     public String getData(){return mData;}
     public String getComentario(){return mComentario;}
 
+    public boolean isData(String eData){
+        return mData.contentEquals(eData);
+    }
 }

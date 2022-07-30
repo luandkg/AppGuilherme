@@ -12,7 +12,7 @@ import com.luandkg.guilherme.escola.render.BimestreImagem;
 import com.luandkg.guilherme.escola.render.FluxoDeEntrega;
 import com.luandkg.guilherme.escola.tempo.BimestreTemporal;
 import com.luandkg.guilherme.escola.Escola;
-import com.luandkg.guilherme.escola.tempo.SEDF_22;
+import com.luandkg.guilherme.escola.gg.SEDF_22;
 import com.luandkg.guilherme.libs.tempo.Calendario;
 import com.luandkg.guilherme.libs.tempo.Data;
 
