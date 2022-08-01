@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.luandkg.guilherme.AvaliadorAnimattor;
+import com.luandkg.guilherme.utils.AvaliadorAnimattor;
 import com.luandkg.guilherme.activities.MomentoDeAvaliacao;
 import com.luandkg.guilherme.escola.render.AvaliadorImagem;
 import com.luandkg.guilherme.R;
@@ -21,7 +21,7 @@ import com.luandkg.guilherme.escola.alunos.AlunoResultado;
 import com.luandkg.guilherme.escola.metodo_avaliativo.AtividadeGraficos;
 import com.luandkg.guilherme.escola.metodo_avaliativo.AtividadesAnalisador;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
-import com.luandkg.guilherme.escola.gg.ESTANCIA3_3BIMESTRE;
+import com.luandkg.guilherme.escola.calendarios.ESTANCIA3_3BIMESTRE;
 import com.luandkg.guilherme.escola.Escola;
 import com.luandkg.guilherme.escola.tempo.SemanaContinua;
 import com.luandkg.guilherme.escola.tempo.SemanaContinuaCarregada;

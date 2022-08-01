@@ -9,8 +9,8 @@ import android.widget.Button;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.luandkg.guilherme.R;
-import com.luandkg.guilherme.anotacoes.Anotacao;
-import com.luandkg.guilherme.anotacoes.SistemaDeAnotacoes;
+import com.luandkg.guilherme.escola.anotacoes.Anotacao;
+import com.luandkg.guilherme.escola.anotacoes.SistemaDeAnotacoes;
 import com.luandkg.guilherme.fragments.AnotadorFragment;
 
 public class AnotacaoEditarActivity extends AppCompatActivity {

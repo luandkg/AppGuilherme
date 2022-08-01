@@ -15,14 +15,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.luandkg.guilherme.databinding.FragmentDesempenhoBinding;
-import com.luandkg.guilherme.databinding.FragmentSlideshowBinding;
-import com.luandkg.guilherme.escola.CalcularNotas;
-import com.luandkg.guilherme.escola.Exportacao;
+import com.luandkg.guilherme.escola.metodo_avaliativo.CalcularNotas;
+import com.luandkg.guilherme.escola.metodo_avaliativo.Exportacao;
 import com.luandkg.guilherme.escola.alunos.AlunoResultado;
-import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
 import com.luandkg.guilherme.escola.metodo_avaliativo.CoresDeAvaliacao;
-import com.luandkg.guilherme.escola.Escola;
-import com.luandkg.guilherme.utils.Strings;
 
 import java.util.ArrayList;
 

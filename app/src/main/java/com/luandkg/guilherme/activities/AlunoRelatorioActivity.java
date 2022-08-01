@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.luandkg.guilherme.R;
 import com.luandkg.guilherme.escola.alunos.AlunoPerfil;
 import com.luandkg.guilherme.escola.metodo_avaliativo.AtividadeRealizada;
-import com.luandkg.guilherme.escola.gg.ESTANCIA3_3BIMESTRE;
+import com.luandkg.guilherme.escola.calendarios.ESTANCIA3_3BIMESTRE;
 import com.luandkg.guilherme.escola.render.FluxoDeEntrega;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Perfilizar;
 import com.luandkg.guilherme.escola.utils.Emblemador;

@@ -17,7 +17,7 @@ import com.luandkg.guilherme.escola.alunos.Aluno;
 import com.luandkg.guilherme.escola.alunos.AlunoAtividade;
 import com.luandkg.guilherme.escola.metodo_avaliativo.AtividadeGraficos;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
-import com.luandkg.guilherme.escola.gg.ESTANCIA3_3BIMESTRE;
+import com.luandkg.guilherme.escola.calendarios.ESTANCIA3_3BIMESTRE;
 import com.luandkg.guilherme.escola.Escola;
 import com.luandkg.guilherme.escola.tempo.SemanaContinua;
 import com.luandkg.guilherme.escola.utils.PaletaDeCores;

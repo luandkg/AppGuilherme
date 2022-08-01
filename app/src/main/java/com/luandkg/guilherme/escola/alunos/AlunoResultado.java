@@ -1,6 +1,5 @@
 package com.luandkg.guilherme.escola.alunos;
 
-import com.luandkg.guilherme.TesteAlteradorDeData;
 import com.luandkg.guilherme.Versionador;
 import com.luandkg.guilherme.escola.metodo_avaliativo.AtividadeRealizada;
 import com.luandkg.guilherme.libs.tempo.Data;

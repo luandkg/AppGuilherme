@@ -1,7 +1,7 @@
 package com.luandkg.guilherme.escola.metodo_avaliativo;
 
 import com.luandkg.guilherme.Local;
-import com.luandkg.guilherme.TesteAlteradorDeData;
+import com.luandkg.guilherme.test.TesteAlteradorDeData;
 import com.luandkg.guilherme.Versionador;
 import com.luandkg.guilherme.libs.dkg.DKG;
 import com.luandkg.guilherme.libs.dkg.DKGObjeto;

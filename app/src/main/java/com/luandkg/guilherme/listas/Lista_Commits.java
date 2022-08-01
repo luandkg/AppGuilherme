@@ -11,10 +11,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.luandkg.guilherme.R;
-import com.luandkg.guilherme.escola.utils.PaletaDeCores;
-import com.luandkg.guilherme.escola.Professor;
-import com.luandkg.guilherme.escola.coisas.TurmaItem;
-import com.luandkg.guilherme.escola.coisas.TurmaItemStruct;
 import com.luandkg.guilherme.libs.tempo.Data;
 import com.luandkg.guilherme.libs.verkuz.Commit;
 import com.luandkg.guilherme.utils.Widget;

@@ -9,7 +9,7 @@ import com.luandkg.guilherme.escola.alunos.Aluno;
 import com.luandkg.guilherme.escola.metodo_avaliativo.AtividadeRealizada;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
 import com.luandkg.guilherme.escola.tempo.ContandoData;
-import com.luandkg.guilherme.escola.gg.ESTANCIA3_3BIMESTRE;
+import com.luandkg.guilherme.escola.calendarios.ESTANCIA3_3BIMESTRE;
 import com.luandkg.guilherme.escola.tempo.SemanaContinua;
 import com.luandkg.guilherme.libs.tempo.Data;
 

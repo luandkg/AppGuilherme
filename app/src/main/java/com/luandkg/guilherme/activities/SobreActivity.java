@@ -1,32 +1,15 @@
 package com.luandkg.guilherme.activities;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.luandkg.guilherme.R;
 import com.luandkg.guilherme.Versionador;
-import com.luandkg.guilherme.anotacoes.Anotacao;
-import com.luandkg.guilherme.anotacoes.SistemaDeAnotacoes;
 import com.luandkg.guilherme.libs.tempo.Data;
-import com.luandkg.guilherme.libs.verkuz.Commit;
-import com.luandkg.guilherme.listas.Itenizador;
-import com.luandkg.guilherme.listas.ListaGenerica;
 import com.luandkg.guilherme.listas.Lista_Commits;
-import com.luandkg.guilherme.utils.Acao;
-import com.luandkg.guilherme.utils.CaixaSimNao;
-import com.luandkg.guilherme.utils.Widget;
-
-import java.util.ArrayList;
 
 public class SobreActivity extends AppCompatActivity {
 

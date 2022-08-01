@@ -2,37 +2,29 @@ package com.luandkg.guilherme.activities;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
 
-import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.ListView;
 
 import com.luandkg.guilherme.R;
-import com.luandkg.guilherme.anotacoes.SistemaDeAnotacoes;
+import com.luandkg.guilherme.escola.anotacoes.SistemaDeAnotacoes;
 import com.luandkg.guilherme.escola.Escola;
 import com.luandkg.guilherme.escola.alunos.AlunoPerfil;
 import com.luandkg.guilherme.escola.alunos.AlunoResultado;
-import com.luandkg.guilherme.escola.gg.ESTANCIA3_3BIMESTRE;
+import com.luandkg.guilherme.escola.calendarios.ESTANCIA3_3BIMESTRE;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Perfilizar;
 import com.luandkg.guilherme.fragments.AnotadorFragment;
 import com.luandkg.guilherme.fragments.Lista_SelecionarUmAluno;
 import com.luandkg.guilherme.libs.tempo.Calendario;
 import com.luandkg.guilherme.libs.tempo.Data;
-import com.luandkg.guilherme.listas.Lista_BuscandoAlunos;
 import com.luandkg.guilherme.utils.CaixaDeDialogoSelecionarData;
 import com.luandkg.guilherme.utils.Strings;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 
 public class LancarAtestadoActivity extends AppCompatActivity {
 

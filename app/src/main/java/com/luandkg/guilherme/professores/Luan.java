@@ -1,8 +1,8 @@
 package com.luandkg.guilherme.professores;
 
-import com.luandkg.guilherme.escola.coisas.AtividadeEspecial;
+import com.luandkg.guilherme.escola.organizacao.AtividadeEspecial;
 import com.luandkg.guilherme.escola.tempo.Horario;
-import com.luandkg.guilherme.escola.Professor;
+import com.luandkg.guilherme.escola.organizacao.Professor;
 import com.luandkg.guilherme.libs.tempo.Calendario;
 import com.luandkg.guilherme.libs.tempo.TempoEstampa;
 import com.luandkg.guilherme.libs.tempo.TempoEstampaDuracao;

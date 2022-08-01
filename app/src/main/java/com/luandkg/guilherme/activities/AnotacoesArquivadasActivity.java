@@ -4,7 +4,6 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,8 +14,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.luandkg.guilherme.R;
-import com.luandkg.guilherme.anotacoes.Anotacao;
-import com.luandkg.guilherme.anotacoes.SistemaDeAnotacoes;
+import com.luandkg.guilherme.escola.anotacoes.Anotacao;
+import com.luandkg.guilherme.escola.anotacoes.SistemaDeAnotacoes;
 import com.luandkg.guilherme.listas.Itenizador;
 import com.luandkg.guilherme.listas.ListaGenerica;
 import com.luandkg.guilherme.utils.Acao;

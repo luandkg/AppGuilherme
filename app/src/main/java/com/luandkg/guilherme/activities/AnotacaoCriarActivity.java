@@ -8,7 +8,7 @@ import android.widget.Button;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.luandkg.guilherme.R;
-import com.luandkg.guilherme.anotacoes.SistemaDeAnotacoes;
+import com.luandkg.guilherme.escola.anotacoes.SistemaDeAnotacoes;
 import com.luandkg.guilherme.fragments.AnotadorFragment;
 
 public class AnotacaoCriarActivity extends AppCompatActivity {

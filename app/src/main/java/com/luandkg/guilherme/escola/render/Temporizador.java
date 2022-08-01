@@ -7,8 +7,8 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
 
-import com.luandkg.guilherme.escola.Professor;
-import com.luandkg.guilherme.escola.coisas.AtividadeEspecial;
+import com.luandkg.guilherme.escola.organizacao.Professor;
+import com.luandkg.guilherme.escola.organizacao.AtividadeEspecial;
 import com.luandkg.guilherme.escola.utils.PaletaDeCores;
 import com.luandkg.guilherme.libs.tempo.Calendario;
 

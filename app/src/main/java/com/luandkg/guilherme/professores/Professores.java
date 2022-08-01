@@ -1,10 +1,7 @@
 package com.luandkg.guilherme.professores;
 
 
-import com.luandkg.guilherme.escola.tempo.Horario;
-import com.luandkg.guilherme.escola.Professor;
-import com.luandkg.guilherme.escola.coisas.TurmaItem;
-import com.luandkg.guilherme.libs.tempo.TempoEstampa;
+import com.luandkg.guilherme.escola.organizacao.Professor;
 
 public class Professores {
 

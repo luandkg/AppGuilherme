@@ -12,9 +12,9 @@ import android.widget.TextView;
 
 import com.luandkg.guilherme.R;
 import com.luandkg.guilherme.escola.utils.PaletaDeCores;
-import com.luandkg.guilherme.escola.Professor;
-import com.luandkg.guilherme.escola.coisas.TurmaItem;
-import com.luandkg.guilherme.escola.coisas.TurmaItemStruct;
+import com.luandkg.guilherme.escola.organizacao.Professor;
+import com.luandkg.guilherme.escola.organizacao.TurmaItem;
+import com.luandkg.guilherme.escola.organizacao.TurmaItemStruct;
 
 import java.util.ArrayList;
 

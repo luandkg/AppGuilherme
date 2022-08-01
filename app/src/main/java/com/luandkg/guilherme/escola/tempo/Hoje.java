@@ -1,6 +1,6 @@
 package com.luandkg.guilherme.escola.tempo;
 
-import com.luandkg.guilherme.escola.coisas.TurmaItem;
+import com.luandkg.guilherme.escola.organizacao.TurmaItem;
 import com.luandkg.guilherme.professores.Professores;
 
 import java.util.ArrayList;

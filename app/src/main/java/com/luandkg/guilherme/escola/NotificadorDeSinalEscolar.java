@@ -3,9 +3,10 @@ package com.luandkg.guilherme.escola;
 import android.content.Context;
 import android.os.Handler;
 
-import com.luandkg.guilherme.escola.coisas.AtividadeEspecial;
-import com.luandkg.guilherme.escola.coisas.CargaDeTrabalho;
-import com.luandkg.guilherme.escola.coisas.TurmaItem;
+import com.luandkg.guilherme.escola.organizacao.AtividadeEspecial;
+import com.luandkg.guilherme.escola.organizacao.CargaDeTrabalho;
+import com.luandkg.guilherme.escola.organizacao.Professor;
+import com.luandkg.guilherme.escola.organizacao.TurmaItem;
 import com.luandkg.guilherme.libs.tempo.Calendario;
 import com.luandkg.guilherme.libs.tempo.Data;
 

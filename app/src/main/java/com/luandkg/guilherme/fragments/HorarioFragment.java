@@ -15,12 +15,12 @@ import androidx.fragment.app.Fragment;
 
 import com.luandkg.guilherme.databinding.FragmentHorarioBinding;
 import com.luandkg.guilherme.escola.utils.PaletaDeCores;
-import com.luandkg.guilherme.escola.Professor;
+import com.luandkg.guilherme.escola.organizacao.Professor;
 import com.luandkg.guilherme.escola.render.Temporizador;
 import com.luandkg.guilherme.professores.Professores;
 import com.luandkg.guilherme.escola.TocadorDeSinalEscolar;
 import com.luandkg.guilherme.listas.Listar_Turmas;
-import com.luandkg.guilherme.escola.coisas.TurmaItem;
+import com.luandkg.guilherme.escola.organizacao.TurmaItem;
 import com.luandkg.guilherme.libs.tempo.Calendario;
 import com.luandkg.guilherme.libs.tempo.Data;
 

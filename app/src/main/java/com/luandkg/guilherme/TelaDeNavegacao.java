@@ -14,12 +14,10 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.luandkg.guilherme.R;
-import com.luandkg.guilherme.Versionador;
 import com.luandkg.guilherme.activities.SobreActivity;
 import com.luandkg.guilherme.databinding.ActivityTelaDeNavegacaoBinding;
 import com.luandkg.guilherme.escola.NotificadorDeSinalEscolar;
-import com.luandkg.guilherme.escola.Professor;
+import com.luandkg.guilherme.escola.organizacao.Professor;
 import com.luandkg.guilherme.professores.Professores;
 import com.luandkg.guilherme.utils.FS;
 import com.luandkg.guilherme.utils.Notificar;

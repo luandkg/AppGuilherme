@@ -17,7 +17,7 @@ import com.luandkg.guilherme.escola.alunos.AlunoPerfil;
 import com.luandkg.guilherme.escola.alunos.AlunoResultado;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Avaliador;
 import com.luandkg.guilherme.escola.metodo_avaliativo.Perfilizar;
-import com.luandkg.guilherme.escola.gg.ESTANCIA3_3BIMESTRE;
+import com.luandkg.guilherme.escola.calendarios.ESTANCIA3_3BIMESTRE;
 import com.luandkg.guilherme.listas.Lista_BuscandoAlunos;
 import com.luandkg.guilherme.utils.Strings;
 

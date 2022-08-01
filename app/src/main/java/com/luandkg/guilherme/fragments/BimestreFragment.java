@@ -10,14 +10,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.luandkg.guilherme.escola.Professor;
+import com.luandkg.guilherme.escola.organizacao.Professor;
 import com.luandkg.guilherme.escola.render.BimestreImagem;
 import com.luandkg.guilherme.databinding.FragmentSlideshowBinding;
 import com.luandkg.guilherme.escola.alunos.Aluno;
 import com.luandkg.guilherme.escola.render.FluxoDeEntrega;
 import com.luandkg.guilherme.escola.tempo.BimestreTemporal;
 import com.luandkg.guilherme.escola.Escola;
-import com.luandkg.guilherme.escola.gg.SEDF_22;
+import com.luandkg.guilherme.escola.calendarios.SEDF_22;
 import com.luandkg.guilherme.professores.Professores;
 import com.luandkg.guilherme.libs.tempo.Calendario;
 import com.luandkg.guilherme.libs.tempo.Data;

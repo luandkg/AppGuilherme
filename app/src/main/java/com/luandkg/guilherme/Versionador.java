@@ -7,7 +7,7 @@ public class Versionador extends Verkuz {
 
     public Versionador() {
 
-        setEstagio(Verkuz.TESTE);
+        setEstagio(Verkuz.RELEASE);
 
         setAutor("Launni Corporation");
         setModo(Verkuz.SIMPLES);
