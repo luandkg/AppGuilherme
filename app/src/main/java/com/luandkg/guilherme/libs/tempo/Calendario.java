@@ -249,6 +249,11 @@ public class Calendario {
         return date;
     }
 
+    public static Data getDataHoje() {
+        return parse(getData());
+    }
+
+
     public static Data parse(String sData) {
 
         int i = 0;

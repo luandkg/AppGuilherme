@@ -29,6 +29,14 @@
         android:text="Lançar Atestado" />
 
     <Button
+        android:id="@+id/anotador_agenda"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="2dp"
+        android:backgroundTint="#ffc107"
+        android:text="Agenda" />
+
+    <Button
         android:id="@+id/anotador_arquivadas"
         android:layout_width="match_parent"
         android:layout_height="50dp"

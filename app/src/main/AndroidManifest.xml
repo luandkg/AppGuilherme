@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Guilherme">
         <activity
+            android:name=".activities.AgendaActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.LancarAtestadoActivity"
             android:exported="false" />
         <activity

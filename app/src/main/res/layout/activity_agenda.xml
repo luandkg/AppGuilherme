@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activities.AgendaActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="AGENDA"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/semana_domingo"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="DOM"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_segunda"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="SEG"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_terca"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="TER"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_quarta"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="QUA"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_quinta"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="QUI"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_sexta"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="SEX"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_sabado"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="SAB"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/semana_01_01"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="01"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_01_02"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="02"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_01_03"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="03"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_01_04"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="04"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_01_05"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="05"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_01_06"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="06"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_01_07"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="07"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/status_01_01"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_01_02"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_01_03"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_01_04"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_01_05"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_01_06"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_01_07"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/semana_02_01"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="01"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_02_02"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="02"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_02_03"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="03"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_02_04"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="04"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_02_05"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="05"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_02_06"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="06"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_02_07"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="07"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/status_02_01"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_02_02"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_02_03"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_02_04"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_02_05"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_02_06"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_02_07"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/semana_03_01"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="01"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_03_02"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="02"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_03_03"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="03"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_03_04"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="04"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_03_05"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="05"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_03_06"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="06"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_03_07"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="07"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/status_03_01"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_03_02"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_03_03"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_03_04"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_03_05"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_03_06"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_03_07"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/semana_04_01"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="01"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_04_02"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="02"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_04_03"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="03"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_04_04"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="04"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_04_05"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="05"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_04_06"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="06"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_04_07"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="07"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/status_04_01"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_04_02"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_04_03"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_04_04"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_04_05"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_04_06"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_04_07"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/semana_05_01"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="01"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_05_02"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="02"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_05_03"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="03"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_05_04"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="04"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_05_05"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="05"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_05_06"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="06"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/semana_05_07"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="07"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/status_05_01"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_05_02"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_05_03"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_05_04"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_05_05"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_05_06"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/status_05_07"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/agenda_lista"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="5dp"
+        android:orientation="vertical" />
+
+</LinearLayout>

@@ -16,6 +16,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.luandkg.guilherme.R;
+import com.luandkg.guilherme.activities.AgendaActivity;
 import com.luandkg.guilherme.activities.AnotacaoCriarActivity;
 import com.luandkg.guilherme.activities.AnotacaoEditarActivity;
 import com.luandkg.guilherme.activities.AnotacoesArquivadasActivity;
@@ -41,6 +42,7 @@ public class AnotadorFragment extends Fragment {
 
     private Button BTN_CRIAR_ANOTACAO;
     private Button BTN_LANCAR_ATESTADO;
+    private Button BTN_AGENDA;
 
     private Context mContexto;
     private Acao RECARREGAR_LISTA;
@@ -65,6 +67,7 @@ public class AnotadorFragment extends Fragment {
         LISTA_AVISOS = mInterface.anotadorListagem;
         BTN_CRIAR_ANOTACAO = mInterface.anotadorCriar;
         BTN_LANCAR_ATESTADO = mInterface.anotadorLancarAtestado;
+        BTN_AGENDA= mInterface.anotadorAgenda;
 
         BTN_ARQUIVADAS = mInterface.anotadorArquivadas;
 
@@ -87,6 +90,18 @@ public class AnotadorFragment extends Fragment {
             public void onClick(View view) {
 
                 Intent intent = new Intent(view.getContext(), LancarAtestadoActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                view.getContext().startActivity(intent);
+
+
+            }
+        });
+
+        BTN_AGENDA.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.R)
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(view.getContext(), AgendaActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 view.getContext().startActivity(intent);
 
 

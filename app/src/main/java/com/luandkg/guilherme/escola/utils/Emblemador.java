@@ -179,5 +179,44 @@ public class Emblemador {
 
     }
 
+    public static Bitmap criarItemAgenda(String valor) {
+
+        int w = 500;
+        int h = 500;
+
+        Bitmap bmp = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bmp);
+
+
+        Paint paint = new Paint();
+        paint.setColor(Color.parseColor("#ffb300"));
+
+
+        if (valor.contains("1")) {
+            paint.setColor(Color.parseColor("#E53935"));
+        } else if (valor.contains("2")) {
+            paint.setColor(Color.parseColor("#FFC107"));
+        } else if (valor.contains("3")) {
+            paint.setColor(Color.parseColor("#4CAF50"));
+        }
+
+        canvas.drawCircle(w / 2, h / 2, 180, paint);
+
+
+        Paint paint2 = new Paint();
+        paint2.setColor(Color.WHITE);
+        paint2.setTextSize(180);
+
+
+        Rect bounds = new Rect();
+        paint2.getTextBounds(String.valueOf(valor), 0, String.valueOf(valor).length(), bounds);
+        int tamanho = bounds.width();
+
+        //canvas.drawText(String.valueOf(valor), (w / 2) - (tamanho / 2), (h / 2) + 60, paint2);
+
+
+        return bmp;
+
+    }
 
 }

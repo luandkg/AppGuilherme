@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_aviso_agendado"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_margin="5dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/item_aviso_agendado_icone"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#ffb300" />
+
+    <TextView
+        android:id="@+id/item_aviso_agendado_texto"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:text="" />
+
+
+</LinearLayout>

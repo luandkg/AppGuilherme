@@ -17,6 +17,9 @@ public class Versionador extends Verkuz {
 
     public void init() {
 
+        DEV("2022_08_07", "Agenda do mês");
+
+
         DEV("2022_07_30", "Lançamento de atestados");
         DEV("2022_07_30", "Selecionador de aluno");
         DEV("2022_07_30", "Selecionador de data");
